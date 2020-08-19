@@ -1,2 +1,2 @@
-# firestack
+# firestack-app
 Created with CodeSandbox
