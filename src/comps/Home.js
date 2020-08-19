@@ -4,7 +4,7 @@ import { PopularMovies, TrendingMovies, ClassicMovies } from './MoviesApi'
 import MovieItem from './MovieItem'
 import MovieRow from './MovieRow'
 import Feature from './Feature'
-
+ 
 function Home() {
 
   const populars = PopularMovies.map(movie => {
