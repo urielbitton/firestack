@@ -27,7 +27,7 @@ function MovieRow(props) {
                 if(!isDown) return;
                 e.preventDefault();
                 const x = e.pageX - item.offsetLeft;
-                const walk = (x - startX) * 0.7; //scroll-fast
+                const walk = (x - startX) * 0.6; 
                 item.scrollLeft = scrollLeft - walk;
             }); 
         }

@@ -27,10 +27,10 @@ function Navbar() {
 
       <div className="menu">
         <h6 className="activemenu" re-router="home"><i className="fas fa-home"></i>Home<hr/></h6>
-        <h6 re-router="movies"><i class="fas fa-film"></i>Movies<hr/></h6>
-        <h6 re-router="tvshows"><i class="fas fa-tv"></i>TV Shows<hr/></h6>
-        <h6 re-router="favorites"><i class="fas fa-heart"></i>Favorites<hr/></h6>
-        <h6 re-router="watchlist"><i class="fas fa-list"></i>Watchlist<hr/></h6>
+        <h6 re-router="movies"><i className="fas fa-film"></i>Movies<hr/></h6>
+        <h6 re-router="tvshows"><i className="fas fa-tv"></i>TV Shows<hr/></h6>
+        <h6 re-router="favorites"><i className="fas fa-heart"></i>Favorites<hr/></h6>
+        <h6 re-router="watchlist"><i className="fas fa-list"></i>Watchlist<hr/></h6>
       </div>
       <div className="profile">
         <img src="https://i.imgur.com/lUQll3N.png" alt="prof" />

@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from './comps/Navbar'
 import MenuSlide from "./comps/MenuSlide";
 import HomeCont from './comps/HomeCont'
+import MoviePage from './comps/MoviePage'
 
 function App() {
    
@@ -44,6 +45,7 @@ function App() {
         <Navbar />
         <MenuSlide />
         <HomeCont />  
+        <MoviePage />
       </>  
     ) 
 
