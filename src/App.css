@@ -379,6 +379,15 @@ nav .profile img {
   padding: 60px  0;
   overflow-x: scroll;
   box-sizing: content-box;
+  transform: scale(0.98);
+  will-change: transform;
+  user-select: none;
+  transition: all 0.2s;
+}
+.movierow:active {
+  cursor: grabbing;
+  cursor: -webkit-grabbing;
+  transform: scale(1);
 }
 .innerrow {
   position: relative;

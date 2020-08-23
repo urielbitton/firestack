@@ -14,7 +14,7 @@ function HomeCont() {
       <Page router="watchlist" pagetitle="Watchlist" movietitle={TrendingMovies[0].title} ratings={TrendingMovies[0].rating} featimg={TrendingMovies[0].cover} genre={TrendingMovies[0].genre} year={TrendingMovies[0].year} descript={TrendingMovies[0].descript}/>
       <Page router="settings" pagetitle="settings"/> 
     </div> 
-  )
+  ) 
 } 
 
 export default HomeCont
