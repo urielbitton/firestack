@@ -2,7 +2,7 @@ import React from 'react'
 
 function Feature(props) {
   return (
-    <>
+    <> 
     <div className="feature">
       <div className="featurebg">
         <img className="featurecover" src={props.featimg} alt="featimg"/>

@@ -4,6 +4,7 @@ import Navbar from './comps/Navbar'
 import MenuSlide from "./comps/MenuSlide";
 import HomeCont from './comps/HomeCont'
 import MoviePage from './comps/MoviePage'
+import {MovieProvider} from './comps/MovieContext' 
 
 function App() {
    
@@ -42,10 +43,12 @@ function App() {
  
   return ( 
       <> 
+      <MovieProvider>
         <Navbar />
         <MenuSlide />
         <HomeCont />  
         <MoviePage />
+      </MovieProvider> 
       </>  
     ) 
 

@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import { PopularMovies, TrendingMovies, ClassicMovies } from './MoviesApi'
 import MovieItem from './MovieItem'
 import MovieRow from './MovieRow'
 import Feature from './Feature'
+import {MovieContext} from './MovieContext'
  
 function Home() { 
 
@@ -10,8 +11,9 @@ function Home() {
   const [title, setTitle] = useState("")
   const [descript, setDescript] = useState("")
   const [year, setYear] = useState(0)
+  const [movies, setMovies] = useContext(MovieContext)
 
-   
+    
   const trending = TrendingMovies.map(movie => {
     return ( 
       <div className="box" onClick={() => {
