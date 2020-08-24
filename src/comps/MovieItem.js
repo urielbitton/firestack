@@ -1,15 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 function MovieItem(props) {
-    
-    useEffect(() => {
-        const playbtn = document.querySelectorAll('.box .playbtn')
-        for(let item of playbtn) {
-            item.onclick = () => {
-                      
-            }
-        }  
-    },[])
     
     return (
         <div className="item">

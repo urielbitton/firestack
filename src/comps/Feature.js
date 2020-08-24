@@ -23,7 +23,7 @@ function Feature(props) {
       </small>
       <p>{props.descript}</p>
       <button><i className="far fa-play-circle"></i>Watch Now</button>
-      <button>Add To Collection</button>
+      <button>Add To Watchlist</button>
       </div> 
     </div>
     <div className="spacer"></div>

@@ -30,7 +30,7 @@ function MenuSlide() {
         <h4>Settings</h4> 
       </div>
     </div>
-  );
+  )
 }
 
 export default MenuSlide;

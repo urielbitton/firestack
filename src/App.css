@@ -229,6 +229,7 @@ nav .profile img {
   overflow-y: scroll;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4,1fr)
 }
 .menuslide::-webkit-scrollbar {
   display: none;
@@ -321,7 +322,7 @@ nav .profile img {
 }
 .feature small span {
   color: #fff;
-  margin-left: 15px;
+  margin-left: 10px;
   font-size: 14px;
 }
 .feature small i {
@@ -392,7 +393,7 @@ nav .profile img {
   padding: 60px  0;
   overflow-x: scroll;
   box-sizing: content-box;
-  transform: scale(0.98);
+  transform: scale(1);
   will-change: transform;
   user-select: none;
   transition: all 0.2s;
@@ -400,7 +401,7 @@ nav .profile img {
 .movierow:active {
   cursor: grabbing;
   cursor: -webkit-grabbing;
-  transform: scale(1);
+  transform: scale(1.02);
 }
 .innerrow {
   position: relative;

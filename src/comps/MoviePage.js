@@ -6,7 +6,7 @@ function MoviePage() {
     <div className="moviepage" re-route="moviepage">
       <Feature />
       <div className="grid">
-        <h1>Single Movie Page</h1>
+        
       </div>
     </div> 
   )
