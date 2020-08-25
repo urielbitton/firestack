@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from './comps/Navbar'
 import MenuSlide from "./comps/MenuSlide";
 import HomeCont from './comps/HomeCont'
+import MovieContextProvider from "./comps/MovieContext";
 
 function App() {
    
@@ -42,7 +43,9 @@ function App() {
       <> 
         <Navbar />
         <MenuSlide />
-        <HomeCont />  
+        <MovieContextProvider>
+          <HomeCont />  
+        </MovieContextProvider>
       </>  
     ) 
 

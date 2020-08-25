@@ -16,9 +16,19 @@ function Navbar() {
         item.classList.add('activemenu')
       } 
     }
+    const darkmode = document.querySelector('.darkmode')
+    darkmode.onclick = () => {
+      darkMode();
+    }
 
   },[])
    
+  function darkMode() {
+    document.querySelector('nav').style.background = '#111'
+    document.querySelector('body').style.background = '#111'
+
+  }
+
   return (
     <>
     <nav>
@@ -35,9 +45,11 @@ function Navbar() {
       <div className="profile">
         <img src="https://i.imgur.com/lUQll3N.png" alt="prof" />
       </div>
+      
       <label>
       <input placeholder="Search"/>
       </label>
+      <i class="fas fa-adjust darkmode"></i>
     </div>
     </nav>
     <div style={{height:'65px'}}></div>
