@@ -45,7 +45,7 @@ function Navbar() {
     document.querySelectorAll('h5').forEach(el => el.style.color = "#eee")
     document.querySelectorAll('small').forEach(el => el.style.color = "#777")
     document.querySelector('.sidebtn').style.color = '#aaa'
-    document.querySelector('.menuslide').style.background = '#111'
+    document.querySelector('.menuslide').style.background = '#181818'
     document.querySelectorAll('h6 hr').forEach(el => el.style.background = "#aaa")
   }
   function undarkMode() {

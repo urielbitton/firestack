@@ -1,6 +1,11 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import Lightbox from './Lightbox'
+import { MovieContext } from './MovieContext'
 
 function Feature(props) {
+
+  const {populars, trendings, classics} = useContext(MovieContext)
+
   return (
     <>  
     <div className="feature">
@@ -24,16 +29,18 @@ function Feature(props) {
         </small>
         <p className="featdescript">{props.descript}</p>
         <p className="starring">
-          <span>Starring</span><br/>
-          {props.starring}
+          <span>Starring</span>
+          {props.starring} 
         </p>
         <button><i className="far fa-play-circle"></i>Watch Now</button>
         <button>Add To Watchlist</button>
       </div> 
     </div>
     <div className="spacer"></div>
+
+    <Lightbox trailer={props.trailer}/>
     </>
   )
-}
+} 
 
 export default Feature

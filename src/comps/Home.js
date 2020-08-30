@@ -13,7 +13,7 @@ function Home(props) {
   const rowtrendings = trendings.map(movie => { 
     return (  
       <div className="box">
-        <MovieItem title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} key={movie.id} openmovie={props.openmovie} />
+        <MovieItem openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} key={movie.id} />
       </div>  
     )  
   }) 
@@ -21,7 +21,7 @@ function Home(props) {
   const rowpopulars = populars.map(movie => {  
     return (
       <div className="box">
-         <MovieItem title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} key={movie.id} openmovie={props.openmovie} />
+         <MovieItem openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} key={movie.id} />
       </div>
     )
   }) 
@@ -29,7 +29,7 @@ function Home(props) {
   const rowclassics = classics.map(movie => {
       return (
         <div className="box">
-           <MovieItem title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} key={movie.id} openmovie={props.openmovie} />
+           <MovieItem openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} key={movie.id} />
         </div>
       )
   })   
@@ -39,7 +39,7 @@ function Home(props) {
   return ( 
     <div className="home" re-route="home"> 
 
-        <Feature title={trendings[randnum].title} cover={trendings[randnum].cover} rating={trendings[randnum].rating} descript={trendings[randnum].descript} genre={trendings[randnum].genre} year={trendings[randnum].year}/>
+        <Feature title={trendings[randnum].title} cover={trendings[randnum].cover} rating={trendings[randnum].rating} descript={trendings[randnum].descript} genre={trendings[randnum].genre} year={trendings[randnum].year} trailer={props.trailer}/>
         <div className="grid">
  
         <MovieRow films={rowtrendings} rowtitle="Trending Movies" />

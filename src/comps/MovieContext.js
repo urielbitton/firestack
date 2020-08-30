@@ -76,7 +76,8 @@ const MovieContextProvider = (props) => {
       descript: "The surviving members of the resistance face the First Order once again, and the legendary conflict between the Jedi and the Sith reaches its peak bringing the Skywalker saga to its end.",
       runtime: "2:15",
       starring: ["Daisy Ridley","John Boyega","Adam Driver"],
-      director: "J.J. Abrams",
+      director: {name: "J.J. Abrams", pic: "https://i.imgur.com/rggpUyL.jpg"},
+      trailer: "https://www.youtube.com/embed/8Qn_spdM5Zg",
   },
   {
       id: 2,
@@ -89,9 +90,10 @@ const MovieContextProvider = (props) => {
       genre: "Action, Superhero",
       runtime: "2:10",
       starring: ["Gal Gadot","Chris Pine","Pedro Pascal"],
-      director: "Patty Jenkins"
+      director: {name: "Patty Jenkins", pic: "https://i.imgur.com/fz2RJWC.jpg?1"},
+      trailer: "https://www.youtube.com/embed/XW2E2Fnh52w",
   },
-  {
+  {  
       id: 9,
       title: "Interstellar",
       year: 2014,
@@ -102,7 +104,9 @@ const MovieContextProvider = (props) => {
       genre: "Sci-fi, Adventure",
       runtime: "2:49",
       starring: ["Matthew McConaughey","Anne Hathaway","Michael Caine"],
-      director: "Christopher Nolan",
+      director: {name: "Christopher Nolan",pic: "https://i.imgur.com/hVReR4q.png"},
+      trailer: "https://www.youtube.com/embed/2LqzF5WauAw",
+      pictures: {pic1: "https://i.imgur.com/z4PLWfJ.jpg",pic2:"https://i.imgur.com/Ir7VIRs.jpg",pic3:"https://i.imgur.com/hRB5Cel.jpg"}
   },
   {
       id: 3,
@@ -115,7 +119,8 @@ const MovieContextProvider = (props) => {
       descript: "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.",
       runtime: "1:43",
       starring: ["Joaquin Phoenix","Robert De Niro","Zazie Beetz"],
-      director: "Todd Phillips",
+      director: {name: "Todd Phillips",pic: "https://i.imgur.com/d8iIgTj.jpg"},
+      trailer: "https://www.youtube.com/embed/zAGVQLHvwOY",
   },
   {
       id: 4,
@@ -127,8 +132,10 @@ const MovieContextProvider = (props) => {
       genre: "Action/Thriller",
       descript: "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
       runtime: "1:20",
-      starring: ["Robert Pattinson","John David Washington","Elizabeth Debicki"],
-      director: "Christopher Nolan",
+      starring: ["John David Washington","Robert Pattinson","Elizabeth Debicki"],
+      director: {name: "Christopher Nolan",pic: "https://i.imgur.com/hVReR4q.png"},
+      trailer: "https://www.youtube.com/embed/L3pk_TBkihU",
+      pictures: {pic1: "https://i.imgur.com/ItLDlek.png",pic2:"https://i.imgur.com/0jD04SE.jpg",pic3:"https://i.imgur.com/Rk0gWCB.jpg"}
   },
   {
       id: 5,
@@ -141,7 +148,8 @@ const MovieContextProvider = (props) => {
       descript: "After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.",
       runtime: "1:39",
       starring: ["Beyoncé","Donald Glover","James Earl Jones"],
-      director: "Jon Favreau",
+      director: {name: "Jon Favreau",pic: "https://i.imgur.com/gj6YWcl.jpg"}, 
+      trailer: "https://www.youtube.com/embed/7TavVZMewpY",
   },
   {
       id: 6,
@@ -154,7 +162,8 @@ const MovieContextProvider = (props) => {
       descript: "A kind-hearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.",
       runtime: "2:05",
       starring: ["Naomi Scott","Will Smith","Mena Massoud"],
-      director: "Guy Ritchie",
+      director: {name: "Guy Ritchie",pic: "https://i.imgur.com/c65ce7z.jpg"},
+      trailer: "https://www.youtube.com/embed/foyufD52aog",
   },
   { 
       id: 7,
@@ -167,11 +176,12 @@ const MovieContextProvider = (props) => {
       genre: "Action, Crime",
       runtime: "1:32",
       starring: ["Ferdia Shaw","Lara McDonnell","Judi Dench"],
-      director: "Kenneth Branagh",
+      director: {name: "Kenneth Branagh",pic: "https://i.imgur.com/7q0mDe2.jpg"},
+      trailer: "https://www.youtube.com/embed/fl2r3Fwxz_o",
   }, 
-  {
+  { 
       id: 8,
-      title: "Aquaman",
+      title: "Aquaman", 
       year: 2018,
       rating: 3221,
       image: "https://imgur.com/bYqJWR6.jpg",
@@ -180,9 +190,10 @@ const MovieContextProvider = (props) => {
       descript: "Arthur Curry, the human-born heir to the underwater kingdom of Atlantis, goes on a quest to prevent a war between the worlds of ocean and land.",
       runtime: "2:12",
       starring: ["Jason Momoa","Amber Heard","Patrick Wilson"],
-      director: "James Wan",
-  }
-  ])
+      director: {name: "James Wan",pic: "https://i.imgur.com/H1YVQ2j.jpg"},
+      trailer: "https://www.youtube.com/embed/WDkg3h8PCVU",
+  } 
+  ]) 
 
   const [classics, setClassics] = useState([
     {

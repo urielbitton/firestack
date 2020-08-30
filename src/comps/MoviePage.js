@@ -21,7 +21,7 @@ function MoviePage(props) {
             <h5>Synopsis<hr/></h5>
             <p>{props.descript}</p>
             <h5>Starring<hr/></h5>
-            {
+            { 
               props.starring.map(el => {
                 return <h6><img src="https://i.imgur.com/t9EHxct.png" alt="actor"/>{el}</h6>
               })
