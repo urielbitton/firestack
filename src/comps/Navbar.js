@@ -32,15 +32,21 @@ function Navbar() {
        
     }
 
-  },[])
+  },[]) 
    
   function darkMode() {
     document.querySelector('nav').style.background = '#111'
     document.querySelector('body').style.background = '#111'
+    document.querySelectorAll('h6,p').forEach(el => el.style.color = "#aaa")
+    document.querySelectorAll('h5').forEach(el => el.style.color = "#eee")
+    document.querySelectorAll('small').forEach(el => el.style.color = "#777")
   }
   function undarkMode() {
     document.querySelector('nav').style.background = ''
     document.querySelector('body').style.background = ''
+    document.querySelectorAll('h6,p').forEach(el => el.style.color = "")
+    document.querySelectorAll('h5').forEach(el => el.style.color = "")
+    document.querySelectorAll('small').forEach(el => el.style.color = "")
   }
 
   return (
