@@ -74,7 +74,9 @@ const MovieContextProvider = (props) => {
       genre: "Action, Sci-fi",
       rating: 4181,
       descript: "The surviving members of the resistance face the First Order once again, and the legendary conflict between the Jedi and the Sith reaches its peak bringing the Skywalker saga to its end.",
-      runtime: "2:15"
+      runtime: "2:15",
+      starring: ["Daisy Ridley","John Boyega","Adam Driver"],
+      director: "J.J. Abrams",
   },
   {
       id: 2,
@@ -85,7 +87,9 @@ const MovieContextProvider = (props) => {
       descript: "Fast forward to the 1980s as Wonder Woman's next big screen adventure finds her facing two all-new foes: Max Lord and The Cheetah.",
       rating: 4187,
       genre: "Action, Superhero",
-      runtime: "2:10"
+      runtime: "2:10",
+      starring: ["Gal Gadot","Chris Pine","Pedro Pascal"],
+      director: "Patty Jenkins"
   },
   {
       id: 9,
@@ -93,10 +97,12 @@ const MovieContextProvider = (props) => {
       year: 2014,
       image: "https://i.imgur.com/d22l87W.jpg",
       cover: "https://i.imgur.com/qkDLVqu.jpg",
-      descript: "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      descript: "In the future, where Earth is becoming uninhabitable, farmer and ex-NASA pilot Cooper is asked to pilot a spacecraft along with a team of researchers to find a new planet for humans.",
       rating: 12187,
       genre: "Sci-fi, Adventure",
-      runtime: "2:49"
+      runtime: "2:49",
+      starring: ["Matthew McConaughey","Anne Hathaway","Michael Caine"],
+      director: "Christopher Nolan",
   },
   {
       id: 3,
@@ -107,18 +113,22 @@ const MovieContextProvider = (props) => {
       cover: "https://i.imgur.com/mMklHTg.jpg",
       genre: "Crime",
       descript: "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker.",
-      runtime: "1:43"
+      runtime: "1:43",
+      starring: ["Joaquin Phoenix","Robert De Niro","Zazie Beetz"],
+      director: "Todd Phillips",
   },
   {
       id: 4,
-      title: "Black Is King",
+      title: "Tenet",
       year: 2020,
-      rating: 1122,
-      image: "https://imgur.com/YQtej7q.jpg",
-      cover: "https://i.imgur.com/NHt9H2U.jpg",
-      genre: "Drama",
-      descript: "Visual album from Beyoncé inspired by 'The Lion King'.",
-      runtime: "1:20"
+      rating: 9132,
+      image: "https://i.imgur.com/RfNFD50.jpg",
+      cover: "https://i.imgur.com/q8Hx670.jpg",
+      genre: "Action/Thriller",
+      descript: "Armed with only one word, Tenet, and fighting for the survival of the entire world, a Protagonist journeys through a twilight world of international espionage on a mission that will unfold in something beyond real time.",
+      runtime: "1:20",
+      starring: ["Robert Pattinson","John David Washington","Elizabeth Debicki"],
+      director: "Christopher Nolan",
   },
   {
       id: 5,
@@ -129,7 +139,9 @@ const MovieContextProvider = (props) => {
       cover: "https://i.imgur.com/duFebko.jpg",
       genre: "Action, Animation",
       descript: "After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.",
-      runtime: "1:39"
+      runtime: "1:39",
+      starring: ["Beyoncé","Donald Glover","James Earl Jones"],
+      director: "Jon Favreau",
   },
   {
       id: 6,
@@ -140,7 +152,9 @@ const MovieContextProvider = (props) => {
       cover: "https://i.imgur.com/hct9HmK.jpg",
       genre: "Action, Drama",
       descript: "A kind-hearted street urchin and a power-hungry Grand Vizier vie for a magic lamp that has the power to make their deepest wishes come true.",
-      runtime: "2:05"
+      runtime: "2:05",
+      starring: ["Naomi Scott","Will Smith","Mena Massoud"],
+      director: "Guy Ritchie",
   },
   { 
       id: 7,
@@ -151,7 +165,9 @@ const MovieContextProvider = (props) => {
       descript: "Artemis Fowl is a 12-year-old genius and descendant of a long line of criminal masterminds. He soon finds himself in an epic battle against a race of powerful underground fairies who may be behind his father's disappearance.",
       rating: 1290,
       genre: "Action, Crime",
-      runtime: "1:32"
+      runtime: "1:32",
+      starring: ["Ferdia Shaw","Lara McDonnell","Judi Dench"],
+      director: "Kenneth Branagh",
   }, 
   {
       id: 8,
@@ -162,7 +178,9 @@ const MovieContextProvider = (props) => {
       cover: "https://i.imgur.com/SjlBIOM.jpg",
       genre: "Action, Superhero",
       descript: "Arthur Curry, the human-born heir to the underwater kingdom of Atlantis, goes on a quest to prevent a war between the worlds of ocean and land.",
-      runtime: "2:12"
+      runtime: "2:12",
+      starring: ["Jason Momoa","Amber Heard","Patrick Wilson"],
+      director: "James Wan",
   }
   ])
 
@@ -248,9 +266,52 @@ const MovieContextProvider = (props) => {
         runtime: "1:40"
     },
   ])
+
+  const [tvs, setTvs] = useState([
+    {
+      id: 1,
+      title: "Hell On Wheels",
+      year: "2011-2016",
+      image: "https://i.imgur.com/eFxlwqX.jpg",
+      cover: "https://i.imgur.com/IDSpXEz.jpg",
+      descript: "The Civil War is past, but former Confederate soldier Cullen Bohannon can't put it behind him. Fresh are the memories of the death of his wife, killed at the hands of the Union soldiers, an act that sets him on a course of revenge.",
+      genre: "American West",
+      rating: 4122
+  },
+  {
+      id: 2,
+      title: "Breaking Bad",
+      year: "2008-2013",
+      image: "",
+      cover: "",
+      descript: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+      genre: "Drama, Crime"
+  } 
+  ])
+
+  const [superheros, setSuperheros] = useState([
+    {
+      id: 1,
+      title: "Avengers: Endgame",
+      year: "2019",
+      image: "https://i.imgur.com/foOKpPz.jpg",
+      cover: "https://i.imgur.com/nqf9lbd.jpg",
+      descript: "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+      genre: "Superhero, Action",
+      ratings: 6766,
+      runtime: "2:46"
+  }
+  ])
+ 
+  const [moviePage, setMoviePage] = useState([
+    {
+      title: "",
+      year: 1998, 
+    }
+  ])
   
   return (
-    <MovieContext.Provider value={{populars, trendings, classics}}>
+    <MovieContext.Provider value={{populars, trendings, classics, tvs, superheros, moviePage}}>
       {props.children}
     </MovieContext.Provider>
   )

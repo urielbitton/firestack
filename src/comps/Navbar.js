@@ -16,9 +16,20 @@ function Navbar() {
         item.classList.add('activemenu')
       } 
     }
+
     const darkmode = document.querySelector('.darkmode')
+    let darkclick = false
+
     darkmode.onclick = () => {
-      darkMode();
+      if(darkclick === false) {
+        darkMode()
+        darkclick = true
+      }
+      else {
+        undarkMode()
+        darkclick = false
+      }
+       
     }
 
   },[])
@@ -26,7 +37,10 @@ function Navbar() {
   function darkMode() {
     document.querySelector('nav').style.background = '#111'
     document.querySelector('body').style.background = '#111'
-
+  }
+  function undarkMode() {
+    document.querySelector('nav').style.background = ''
+    document.querySelector('body').style.background = ''
   }
 
   return (

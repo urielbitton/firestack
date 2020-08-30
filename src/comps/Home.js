@@ -3,23 +3,25 @@ import MovieItem from './MovieItem'
 import MovieRow from './MovieRow'
 import Feature from './Feature'
 import { MovieContext } from './MovieContext'
+import MoviePage from './MoviePage'
+
  
-function Home() { 
- 
+function Home(props) {  
+   
   const {populars, trendings, classics} = useContext(MovieContext)
 
-  const rowtrendings = trendings.map(movie => {
+  const rowtrendings = trendings.map(movie => { 
     return (  
       <div className="box">
-        <MovieItem title={movie.title} year={movie.year} image={movie.image} runtime={movie.runtime} key={movie.id}  />
-      </div>
-    ) 
+        <MovieItem title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} key={movie.id} openmovie={props.openmovie} />
+      </div>  
+    )  
   }) 
 
   const rowpopulars = populars.map(movie => {  
     return (
       <div className="box">
-        <MovieItem title={movie.title} year={movie.year} image={movie.image} runtime={movie.runtime}  key={movie.id}  />
+         <MovieItem title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} key={movie.id} openmovie={props.openmovie} />
       </div>
     )
   }) 
@@ -27,19 +29,17 @@ function Home() {
   const rowclassics = classics.map(movie => {
       return (
         <div className="box">
-          <MovieItem title={movie.title} year={movie.year} image={movie.image} runtime={movie.runtime}  key={movie.id}  />
+           <MovieItem title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} key={movie.id} openmovie={props.openmovie} />
         </div>
       )
-  })  
+  })   
 
-  
- 
-const randnum = Math.floor(Math.random() * 9) + 0; 
+  const randnum = Math.floor(Math.random() * 9) + 0; 
 
   return ( 
     <div className="home" re-route="home"> 
 
-        <Feature movietitle={trendings[randnum].title} featimg={trendings[randnum].cover} ratings={trendings[randnum].rating} descript={trendings[randnum].descript} genre={trendings[randnum].genre} year={trendings[randnum].year}/>
+        <Feature title={trendings[randnum].title} cover={trendings[randnum].cover} rating={trendings[randnum].rating} descript={trendings[randnum].descript} genre={trendings[randnum].genre} year={trendings[randnum].year}/>
         <div className="grid">
  
         <MovieRow films={rowtrendings} rowtitle="Trending Movies" />
@@ -49,9 +49,9 @@ const randnum = Math.floor(Math.random() * 9) + 0;
         <MovieRow films={rowclassics} rowtitle="Classics" />
           <div className="clear"></div>
         
-      </div> 
+      </div>  
     </div>
   )
 }
 
-export default Home
+export default Home 

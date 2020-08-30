@@ -13,10 +13,10 @@ function MovieItem(props) {
                     <i className="far fa-heart"></i>
                     <small><i className="fas fa-clock"></i>{props.runtime}</small>  
                 </div>
-                <i className="far fa-play-circle playbtn" re-router="moviepage"></i>
+                <i className="far fa-play-circle playbtn" re-router="moviepage" onClick={() => props.openmovie(props.title, props.year, props.image, props.cover, props.descript, props.rating, props.genre, props.runtime, props.starring, props.director)}></i>
             </div>     
-        </div> 
-    ) 
+        </div>  
+    )  
 } 
-
+ 
 export default MovieItem 
