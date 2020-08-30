@@ -2,15 +2,19 @@ import React, {useEffect} from 'react'
 
 
 function Navbar() {
-  
+   
   useEffect(() => {
     const menulink = document.querySelectorAll('nav h6')
+    const menuslide = document.querySelector('.menuslide')
+    const menuclick = false
     for(let item of menulink) {
       item.onclick = () => {
         for(let i=0;i<menulink.length;i++) {
           menulink[i].querySelector('hr').style.opacity = '0' 
           menulink[i].style.color = ''      
           menulink[i].classList.remove('activemenu') 
+          menuslide.style.top = '65px'
+          menuclick = true 
         }
         item.querySelector('hr').style.opacity = '1'
         item.classList.add('activemenu')
@@ -40,6 +44,9 @@ function Navbar() {
     document.querySelectorAll('h6,p').forEach(el => el.style.color = "#aaa")
     document.querySelectorAll('h5').forEach(el => el.style.color = "#eee")
     document.querySelectorAll('small').forEach(el => el.style.color = "#777")
+    document.querySelector('.sidebtn').style.color = '#aaa'
+    document.querySelector('.menuslide').style.background = '#111'
+    document.querySelectorAll('h6 hr').forEach(el => el.style.background = "#aaa")
   }
   function undarkMode() {
     document.querySelector('nav').style.background = ''
@@ -47,6 +54,8 @@ function Navbar() {
     document.querySelectorAll('h6,p').forEach(el => el.style.color = "")
     document.querySelectorAll('h5').forEach(el => el.style.color = "")
     document.querySelectorAll('small').forEach(el => el.style.color = "")
+    document.querySelector('.sidebtn').style.color = ''
+    document.querySelectorAll('h6 hr').forEach(el => el.style.background = "")
   }
 
   return (
@@ -63,7 +72,7 @@ function Navbar() {
         <h6 re-router="watchlist"><i className="fas fa-list"></i>Watchlist<hr/></h6>
       </div>
       <div className="profile">
-        <img src="https://i.imgur.com/lUQll3N.png" alt="prof" />
+        <img src="https://i.imgur.com/t9EHxct.png" alt="prof" />
       </div>
       
       <label>
