@@ -364,19 +364,19 @@ nav .profile img {
   color: #fff;
   z-index: 10;
 }
-.feature button:nth-of-type(1):hover {
+.feature .watchnowbtn:hover {
   filter: brightness(85%);
 }
-.feature button:nth-of-type(1) {
+.feature .watchnowbtn {
   background: var(--color);
 }
-.feature button:nth-of-type(2) {
+.feature .addtobtn {
   background: none;
   border: 1px solid #fff;
 }
-.feature button:nth-of-type(2):hover {
+.feature .addtobtn:hover {
   background:rgba(255,255,255,0.4)
-}
+} 
   
 .home {
   position: relative;
@@ -619,9 +619,34 @@ nav .profile img {
   width: 100%;
   height: 200px;
 }
- 
-
- 
+.lightboxcont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: rgba(0,0,0,0.9);
+  z-index: 999;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}  
+.lightboxcont .lightbox {
+  position: relative;
+  width: 70%;
+  height: 70vh;
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+.lightboxcont .lightbox iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
 
 
 
