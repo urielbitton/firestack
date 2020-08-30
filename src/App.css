@@ -103,6 +103,9 @@ hr {
 .spacer {
   height: 50px;
 }
+.spacers {
+  height: 30px;
+}
 .spacerl {
   height: 100px;
 }
@@ -532,9 +535,30 @@ nav .profile img {
   display: inline-block;
   width: 90px;
 }
+.moviepage .featdescript {
+  display: none;
+}
+.home .starring {
+  display: none;
+}
+.moviepage .starring {
+  display: block;
+}
+.moviepage .starring {
+  color: #eee;
+  font-size: 14px;
+}
+.moviepage .starring span {
+  display: block;
+  font-weight: 600; 
+  color: #fff;
+  margin-bottom:5px;
+  font-size: 15px;
+}
 .onemoviegrid {
+  position: relative;
   display: grid;
-  grid-template-columns: 20% 50% 30%;
+  grid-template-columns: 1fr 3fr 1.2fr;
   grid-column-gap: 40px;
 }
 .oneimage img {
@@ -550,13 +574,13 @@ nav .profile img {
   margin-bottom: 10px;
   color: #555;
 }
-.onemovieinfo h5 {
+.onemoviegrid h5 {
   color: #333;
   font-weight: 700;
   font-size: 18px;
   margin-bottom: 40px;
 }
-.onemovieinfo h5 hr {
+.onemoviegrid h5 hr {
   position: relative;
   height: 1px;
   background-color: #333;
@@ -567,31 +591,37 @@ nav .profile img {
 }
 .onemovieinfo p {
   font-size: 14px;
-  width: 95%;
+  width: 90%;
   font-weight: 500;
   color: #777;
-} 
-.moviepage .featdescript {
-  display: none;
+  margin-bottom: 50px;
+}  
+.onemovieinfo h6 {
+  float: left;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10px auto;
+  margin-right: 50px; 
 }
-.home .starring {
-  display: none;
+.onemovieinfo h6 span {
+  text-align: center;
 }
-.moviepage .starring {
+.onemovieinfo img {
   display: block;
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 100%;
 }
-.starring {
-  color: #eee;
+.onemoviemedia iframe {
+  width: 100%;
+  height: 200px;
 }
-.starring span {
-  font-weight: 600;
-  color: #fff;
-}
+ 
 
-
-
-
-
+ 
 
 
 
@@ -612,5 +642,29 @@ nav .profile img {
 @media (max-width:1600px) {
   .grid {
     width: 97%;
+  }
+}
+
+@media (max-width:1200px) {
+  .onemoviegrid {
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+  }
+} 
+@media (max-width:1080px) {
+  nav .menu {
+    display: none;
+  }
+  .moviepage .featureplaybtn {
+    display: none;
+  }
+}
+@media (max-width:700px) {
+  .onemoviegrid {
+    grid-template-columns: 1fr;
+  }
+  .onemoviegrid > div {
+    margin: 30px auto;
+    margin-left: 0;
   }
 }
