@@ -224,7 +224,7 @@ nav .profile img {
   margin-right: 30px;
   top: 25px;
   cursor: pointer;
-}
+} 
 .darkmode:hover {
   color:#333;
 }
@@ -370,11 +370,11 @@ nav .profile img {
 .feature .watchnowbtn {
   background: var(--color);
 }
-.feature .wishbtn {
+.feature .watchlist {
   background: none;
   border: 1px solid #fff;
 }
-.feature .wishbtn:hover {
+.feature .watchlist:hover {
   background:rgba(255,255,255,0.4)
 } 
   
@@ -647,6 +647,7 @@ nav .profile img {
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
+  cursor: url(https://i.imgur.com/GSfMhIM.png), auto; 
 }  
 .lightboxcont .lightbox {
   position: relative;
@@ -660,6 +661,16 @@ nav .profile img {
   height: 100%;
   border-radius: 10px;
 }
+.lightboxcont .close {
+  position: absolute;
+  top: 50px;
+  font-size: 30px;
+  color: #aaa;
+}
+.lightboxcont .close:hover {
+  color: #fff;
+}
+
 .imageslider {
   position: relative;
   width: 100%;
@@ -713,7 +724,13 @@ nav .profile img {
   display: inline-block;
   margin-left: 20px;
 } 
-
+.notifcont .close {
+  position: relative;
+  margin-left: 20px;
+  top: 6px;
+  font-size: 20px;
+  color: #aaa;
+}
  
 
 
