@@ -10,63 +10,119 @@ const MovieContextProvider = (props) => {
       title: "Avengers: Infinity War",
       year: 2019,
       image: "https://imgur.com/IdUrFXz.jpg",
+      cover: "https://i.imgur.com/Fe14JKK.jpg",
       genre: "Action, Superhero",
-      runtime: "2:30"
+      runtime: "2:30",
+      descript: "The Avengers must stop Thanos, an intergalactic warlord, from getting his hands on all the infinity stones. However, Thanos is prepared to go to any lengths to carry out his insane plan.",
+      starring: ["Robert Downey Jr.","Chris Evans","Josh Brolin"],
+      director: {name: "Russo Brothers", pic: "https://i.imgur.com/ELuKXfR.jpg"},
+      trailer: "https://www.youtube.com/embed/6ZfuNTqbHE8",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt2527338/",
+      watchlist: false,
   }, 
   {
       id: 2, 
       title: "Bad Boys For Life",
       year: 2020,
       image: "https://imgur.com/65HpXJ2.jpg",
+      cover: "https://i.imgur.com/i5SPHPm.jpg",
       genre: "Action, Crime",
-      runtime: "1:40"
+      runtime: "1:40",
+      descript: "Detectives Mike Lowrey and Marcus Burnett join the Miami Police Department's special team AMMO to bring down the ruthless Armando, who is on a mission to kill Mike at his mother Isabel's orders.",
+      starring: ["Will Smith","Martin Lawrence","Vanessa Hudgens"],
+      director: {name: "Bilall Fallah", pic: "https://i.imgur.com/Z4Iqzz9.jpg"},
+      trailer: "https://www.youtube.com/embed/jKCj3XuPG8M",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt2527338/",
+      watchlist: false,
   },
   {
       id: 3,
       title: "Black Panther",
       year: 2018,
       image: "https://imgur.com/8YvAuK0.jpg",
+      cover: "https://i.imgur.com/AzjuxOB.jpg",
       genre: "Action, Superhero",
-      runtime: "1:55"
+      runtime: "1:55",
+      descript: "After his father's death, T'Challa returns home to Wakanda to inherit his throne. However, a powerful enemy related to his family threatens to attack his nation.",
+      starring: ["Chadwick Boseman","Michael B. Jordan","Letitia Wright"],
+      director: {name: "Ryan Coogler", pic: "https://i.imgur.com/7YA9sQC.png"},
+      trailer: "https://www.youtube.com/embed/xjDjIWPwcPU",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt2527338/",
+      watchlist: false,
   },
   {
       id: 4,
       title: "Captain Marvel",
       year: 2019,
       image: "https://imgur.com/VC37AJR.jpg",
+      cover: "https://i.imgur.com/ZHsaubT.jpg",
       genre: "Action, Superhero",
-      runtime: "1:45"
+      runtime: "1:45",
+      descript: "Amidst a mission, Vers, a Kree warrior, gets separated from her team and is stranded on Earth. However, her life takes an unusual turn after she teams up with Fury, a S.H.I.E.L.D. agent.",
+      starring: ["Brie Larson","Samuel L. Jackson","Gemma Chan"],
+      director: {name: "Anna Boden", pic: "https://i.imgur.com/SHGYa6S.jpg"},
+      trailer: "https://www.youtube.com/embed/Z1BCujX3pw8",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt2527338/",
+      watchlist: false,
   },
   {
       id: 5,
       title: "Moonlight",
       year: 2016,
       image: "https://imgur.com/VlketGj.jpg",
+      cover: "https://i.imgur.com/9bWovfe.jpg",
       genre: "Drama",
-      runtime: "1:40"
+      runtime: "1:40",
+      descript: "Chiron, a young African-American boy, finds guidance in Juan, a drug dealer, who teaches him to carve his own path. As he grows up in Miami, Juan's advice leaves a lasting impression on him.",
+      starring: ["Mahershala Ali","Trevante Rhodes","Janelle Monáe"],
+      director: {name: "Barry Jenkins", pic: "https://i.imgur.com/0xzTsHZ.jpg"},
+      trailer: "https://www.youtube.com/embed/9NJj12tJzqc",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt2527338/",
+      watchlist: false,
   },
   {
       id: 6,
       title: "Thor Ragnarok",
       year: 2017,
       image: "https://imgur.com/R2g3fBM.jpg",
+      cover: "https://i.imgur.com/ZNeuiT5.jpg",
       genre: "Action, Superhero",
-      runtime: "2:10"
+      runtime: "2:10",
+      descript: "Deprived of his mighty hammer Mjolnir, Thor must escape the other side of the universe to save his home, Asgard, from Hela, the goddess of death.",
+      starring: ["Chris Hemsworth","Cate Blanchett","Tom Hiddleston"],
+      director: {name: "Taika Waititi", pic: "https://i.imgur.com/tC0Mk4P.jpg"},
+      trailer: "https://www.youtube.com/embed/ue80QwXMRHg",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt2527338/",
+      watchlist: false,
   },
   {
       id: 7,
       title: "Jurassic World 2",
       year: 2018,
       image: "https://imgur.com/TbbK0f7.jpg",
+      cover: "https://i.imgur.com/c0ykzRM.jpg",
       genre: "Sci-fi",
       rating: 4337,
-      runtime: "1:37"
+      runtime: "1:37",
+      descript: "After a volcano eruption proves to be a threat for the dinosaurs, Owen and Claire reach the defunct Jurassic World, a theme park, to save the animals from extinction.",
+      starring: ["Chris Pratt","Bryce Dallas Howard","Jeff Goldblum"],
+      director: {name: "J. A. Bayona", pic: "https://i.imgur.com/BkVOKbh.png"},
+      trailer: "https://www.youtube.com/embed/vn9mMeWcgoM",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt2527338/",
+      watchlist: false,
   } 
   ])
 
   const [trendings, setTrendings] = useState([
     {
-      id: 1,
+      id: 1, 
       title: "Star Wars: The Rise Of Skywalker",
       year: 2019,
       image: "https://imgur.com/ZXAUvS2.jpg",
@@ -78,10 +134,13 @@ const MovieContextProvider = (props) => {
       starring: ["Daisy Ridley","John Boyega","Adam Driver"],
       director: {name: "J.J. Abrams", pic: "https://i.imgur.com/rggpUyL.jpg"},
       trailer: "https://www.youtube.com/embed/8Qn_spdM5Zg",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt2527338/",
+      watchlist: false,
   },
   {
-      id: 2,
-      title: "Wonder Woman: 1984",
+      id: 2, 
+      title: "Wonder Woman: 1984", 
       year: 2021,
       image: "https://imgur.com/PA3xwJA.jpg",
       cover: "https://i.imgur.com/dc8WQFN.jpg",
@@ -92,6 +151,9 @@ const MovieContextProvider = (props) => {
       starring: ["Gal Gadot","Chris Pine","Pedro Pascal"],
       director: {name: "Patty Jenkins", pic: "https://i.imgur.com/fz2RJWC.jpg?1"},
       trailer: "https://www.youtube.com/embed/XW2E2Fnh52w",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt7126948/",
+      watchlist: false,
   },
   {  
       id: 9,
@@ -106,7 +168,9 @@ const MovieContextProvider = (props) => {
       starring: ["Matthew McConaughey","Anne Hathaway","Michael Caine"],
       director: {name: "Christopher Nolan",pic: "https://i.imgur.com/hVReR4q.png"},
       trailer: "https://www.youtube.com/embed/2LqzF5WauAw",
-      pictures: {pic1: "https://i.imgur.com/z4PLWfJ.jpg",pic2:"https://i.imgur.com/Ir7VIRs.jpg",pic3:"https://i.imgur.com/hRB5Cel.jpg"}
+      pictures: ["https://i.imgur.com/z4PLWfJ.jpg","https://i.imgur.com/Ir7VIRs.jpg","https://i.imgur.com/hRB5Cel.jpg"],
+      imdblink: "https://www.imdb.com/title/tt0816692/",
+      watchlist: false,
   },
   {
       id: 3,
@@ -121,6 +185,9 @@ const MovieContextProvider = (props) => {
       starring: ["Joaquin Phoenix","Robert De Niro","Zazie Beetz"],
       director: {name: "Todd Phillips",pic: "https://i.imgur.com/d8iIgTj.jpg"},
       trailer: "https://www.youtube.com/embed/zAGVQLHvwOY",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt7286456/",
+      watchlist: false,
   },
   {
       id: 4,
@@ -135,21 +202,26 @@ const MovieContextProvider = (props) => {
       starring: ["John David Washington","Robert Pattinson","Elizabeth Debicki"],
       director: {name: "Christopher Nolan",pic: "https://i.imgur.com/hVReR4q.png"},
       trailer: "https://www.youtube.com/embed/L3pk_TBkihU",
-      pictures: {pic1: "https://i.imgur.com/ItLDlek.png",pic2:"https://i.imgur.com/0jD04SE.jpg",pic3:"https://i.imgur.com/Rk0gWCB.jpg"}
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt6723592/",
+      watchlist: false,
   },
   {
-      id: 5,
+      id: 5, 
       title: "The Lion King",
       year: 2019,
       rating: 4337,
       image: "https://imgur.com/nOjZI3b.jpg",
       cover: "https://i.imgur.com/duFebko.jpg",
-      genre: "Action, Animation",
+      genre: "Adventure, Animation",
       descript: "After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery.",
       runtime: "1:39",
       starring: ["Beyoncé","Donald Glover","James Earl Jones"],
       director: {name: "Jon Favreau",pic: "https://i.imgur.com/gj6YWcl.jpg"}, 
       trailer: "https://www.youtube.com/embed/7TavVZMewpY",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt6105098/",
+      watchlist: false,
   },
   {
       id: 6,
@@ -164,6 +236,9 @@ const MovieContextProvider = (props) => {
       starring: ["Naomi Scott","Will Smith","Mena Massoud"],
       director: {name: "Guy Ritchie",pic: "https://i.imgur.com/c65ce7z.jpg"},
       trailer: "https://www.youtube.com/embed/foyufD52aog",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt6139732/",
+      watchlist: false,
   },
   { 
       id: 7,
@@ -178,6 +253,9 @@ const MovieContextProvider = (props) => {
       starring: ["Ferdia Shaw","Lara McDonnell","Judi Dench"],
       director: {name: "Kenneth Branagh",pic: "https://i.imgur.com/7q0mDe2.jpg"},
       trailer: "https://www.youtube.com/embed/fl2r3Fwxz_o",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt3089630/",
+      watchlist: false,
   }, 
   { 
       id: 8,
@@ -192,7 +270,27 @@ const MovieContextProvider = (props) => {
       starring: ["Jason Momoa","Amber Heard","Patrick Wilson"],
       director: {name: "James Wan",pic: "https://i.imgur.com/H1YVQ2j.jpg"},
       trailer: "https://www.youtube.com/embed/WDkg3h8PCVU",
-  } 
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt1477834/",
+      watchlist: false,
+  }, 
+  {  
+      id: 10,
+      title: "Avengers: Endgame",
+      year: 2019,
+      image: "https://i.imgur.com/8LqPjy5.jpg",
+      cover: "https://i.imgur.com/bhF3okW.png",
+      genre: "Action, SUperhero",
+      rating: 7481,
+      descript: "After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.",
+      runtime: "3:02",
+      starring: ["Robert Downey Jr.","Chris Evans","Josh Brolin"],
+      director: {name: "Russo Brothers", pic: "https://i.imgur.com/ELuKXfR.jpg"},
+      trailer: "https://www.youtube.com/embed/TcMBFSGVi1c",
+      pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
+      imdblink: "https://www.imdb.com/title/tt2527338/", 
+      watchlist: false,
+   }, 
   ]) 
 
   const [classics, setClassics] = useState([
@@ -287,7 +385,8 @@ const MovieContextProvider = (props) => {
       cover: "https://i.imgur.com/IDSpXEz.jpg",
       descript: "The Civil War is past, but former Confederate soldier Cullen Bohannon can't put it behind him. Fresh are the memories of the death of his wife, killed at the hands of the Union soldiers, an act that sets him on a course of revenge.",
       genre: "American West",
-      rating: 4122
+      rating: 4122,
+      trailer: "https://www.youtube.com/embed/78zEDBmHwbU"
   },
   {
       id: 2,
@@ -301,28 +400,56 @@ const MovieContextProvider = (props) => {
   ])
 
   const [superheros, setSuperheros] = useState([
-    {
+    { 
       id: 1,
-      title: "Avengers: Endgame",
-      year: "2019",
-      image: "https://i.imgur.com/foOKpPz.jpg",
-      cover: "https://i.imgur.com/nqf9lbd.jpg",
-      descript: "After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+      title: "Avengers: Age Of Ultron",
+      year: "2015",
+      image: "https://i.imgur.com/DZ9JBbf.jpg",
+      cover: "https://i.imgur.com/s25eTKt.jpg",
+      descript: "Tony Stark builds an artificial intelligence system named Ultron with the help of Bruce Banner. When the sentient Ultron makes plans to wipe out the human race, the Avengers set out to stop him.",
       genre: "Superhero, Action",
-      ratings: 6766,
-      runtime: "2:46"
+      ratings: 4744,
+      runtime: "2:06",
+      trailer: "https://www.youtube.com/embed/tmeOjFno6Do"
   }
-  ])
- 
+  ]) 
+  const [general, setGeneral] = useState([
+    { 
+      id: 1,
+      title: "Blade Runner 2049",
+      year: "2017",
+      image: "https://i.imgur.com/Q0DxB75.png",
+      cover: "https://i.imgur.com/AwTxaAL.jpg",
+      descript: "K, an officer with the Los Angeles Police Department, unearths a secret that could cause chaos. He goes in search of a former blade runner who has been missing for three decades.",
+      genre: "Science Fiction",
+      ratings: 2724,
+      runtime: "1:46",
+      trailer: "https://www.youtube.com/embed/gCcx85zbxz4"
+    },
+    { 
+        id: 2,
+        title: "Knives Out",
+        year: "2019",
+        image: "https://i.imgur.com/nOlGLfl.jpg",
+        cover: "https://i.imgur.com/szaePYp.jpg",
+        descript: "The circumstances surrounding the death of crime novelist Harlan Thrombey are mysterious, but there's one thing that renowned Detective Benoit Blanc knows for sure -- everyone in the wildly dysfunctional Thrombey family is a suspect. Now, Blanc must sift through a web of lies and red herrings to uncover the truth.",
+        genre: "Mystery, Comedy",
+        ratings: 4324,
+        runtime: "1:56",
+        trailer: "https://www.youtube.com/embed/xi-1NchUqMA"
+    },
+  ]) 
+  
   const [moviePage, setMoviePage] = useState([
     {
       title: "",
       year: 1998, 
     }
-  ])
+  ])  
+
   
   return (
-    <MovieContext.Provider value={{populars, trendings, classics, tvs, superheros, moviePage}}>
+    <MovieContext.Provider value={{populars, trendings, classics, tvs, superheros, moviePage, general, setGeneral}}>
       {props.children}
     </MovieContext.Provider>
   )

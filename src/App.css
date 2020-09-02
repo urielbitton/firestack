@@ -13,6 +13,7 @@ html, body {
   --grad4: linear-gradient(180deg, rgba(245,253,111,1) 0%, rgba(60,192,144,1) 100%);
   --grad5: linear-gradient(180deg, rgba(253,144,111,1) 0%, rgba(255,197,4,1) 100%);
   --grad6: linear-gradient(180deg, rgba(12,17,255,1) 0%, rgba(4,199,255,1) 100%);
+  --xcursor: url(https://i.imgur.com/GSfMhIM.png), auto; 
 }   
   
 .grid {
@@ -66,6 +67,7 @@ hr {
 ::-webkit-scrollbar {
   display:block;
   width:15px;
+  border-radius: 40px;
 } 
 ::-webkit-scrollbar-track {
   background: #ddd;
@@ -211,7 +213,7 @@ nav .profile img {
   margin-left: 20px;
   border-radius: 100%;
 }
-.darkmode, .addmovie {
+.darkmode, .addmoviebtn {
   float: right;
   font-size: 22px;
   color: #555;
@@ -223,7 +225,7 @@ nav .profile img {
 .darkmode:hover {
   color:#333;
 }
-.addmovie:hover {
+.addmoviebtn:hover {
   color: var(--color)
 }
 
@@ -650,7 +652,7 @@ nav .profile img {
   justify-content: center;
   align-items: center;
   transition: all 0.3s;
-  cursor: url(https://i.imgur.com/GSfMhIM.png), auto; 
+  cursor: var(--xcursor);
 }  
 .lightboxcont .lightbox {
   position: relative;
@@ -774,16 +776,110 @@ nav .profile img {
 .watchlistpage .watchlist {
   display: none;
 }
-
-
-
-
-
-
-
-
-
-
+.addmoviecont {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 900;
+  backdrop-filter: blur(7px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: var(--xcursor);
+  transition: all 0.3s;
+  opacity: 0;
+  display: none;
+} 
+.closeaddmovie {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+} 
+.addmovie {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  background: rgba(255,255,255,0.9);
+  border-radius: 10px;
+  cursor: auto;
+  padding:30px;
+  overflow-y: scroll;
+  transform: scale(0.9);
+  transition: all 0.3s;
+  z-index: 2;
+}
+.addmovie::-webkit-scrollbar {
+  display: none;
+}
+.addmovie h4 {
+  text-align: center;
+  font-size: 26px;
+  font-weight:600;
+}
+.addmoviegrid {
+  position: relative;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 60px 40px;
+}
+.addmoviegrid label {
+  position: relative;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.addmoviegrid label i {
+  position: absolute;
+  font-size:18px;
+  padding: 16px 14px;
+  height: 100%;
+  background: var(--color);
+}
+.addmoviegrid input {
+  padding: 15px 10px;
+  padding-left: 55px;
+  background: none;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+.addmoviegrid input:focus{
+  border: 2px solid var(--color);
+}
+.addmoviegrid input::placeholder {
+  color:#aaa;
+}
+.addmoviegrid input[type="checkbox"] {
+  height:30%;
+  width: 30%;
+  position: absolute;
+  left: 50px;
+  right: 0;
+  margin: auto;
+  margin-top: 17px; 
+}
+.addmoviegrid input[type="checkbox"] + small {
+  font-size: 12px;
+  top: 15px;
+  left:60px;
+  color: #aaa;
+}
+.addmovie button {
+  margin-top: 50px;
+  background: var(--color);
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: #fff;
+}
+.addmovie button:hover {
+  filter: brightness(90%);
+}
 
 
 
@@ -806,6 +902,9 @@ nav .profile img {
   .grid {
     width: 97%;
   }
+  .addmovie {
+    width: 80%;
+  }
 }
 
 @media (max-width:1200px) {
@@ -813,6 +912,7 @@ nav .profile img {
     grid-template-columns: 1fr 2fr;
     grid-gap: 10px;
   }
+  
 } 
 @media (max-width:1080px) {
   nav .menu {
@@ -823,6 +923,9 @@ nav .profile img {
   }
   .searchcont input {
     width: 80%;
+  }
+  .addmovie {
+    width: 90%;
   }
 }
 @media (max-width:700px) {

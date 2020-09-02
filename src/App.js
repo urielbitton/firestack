@@ -11,9 +11,9 @@ function App() {
   return (  
       <> 
       <Router>
+        <MovieContextProvider>  
         <Navbar />
         <MenuSlide />
-        <MovieContextProvider>  
         <HomeCont />  
         </MovieContextProvider>
       </Router>  

@@ -1,13 +1,20 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
+import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
 import Home from './Home'
 import Page from './Page'
 import MoviePage from './MoviePage'
 import { MovieContext } from './MovieContext'
-
- 
+import Notifs from './Notifs'
+import Movies from './Movies'
+import Tvs from './Tvs'
+import Favorites from './Favorites'
+import Watchlist from './Watchlist'
+import Settings from './Settings'
+   
+       
 function HomeCont() {
 
-  const {populars, trendings, classics, superheros, tvs, moviePage} = useContext(MovieContext)
+  const {populars, trendings, classics, superheros, tvs, general, moviePage} = useContext(MovieContext)
   const [title, setTitle] = useState("")
   const [year, setYear] = useState(1900)
   const [image, setImage] = useState("")
@@ -19,9 +26,12 @@ function HomeCont() {
   const [starring, setStarring] = useState([])
   const [director, setDirector] = useState("")
   const [trailer, setTrailer] = useState("")
+  const [pictures, setPictures] = useState([])
+  const [imdblink, setImdblink] = useState("")
+  const [watchlist, setWatchlist] = useState(false)
 
   //set movie page func 
-  function openMovie(title, year, image, cover, descript, rating, genre, runtime, starring, director, trailer) {
+  function openMovie(title, year, image, cover, descript, rating, genre, runtime, starring, director, trailer, pictures, imdblink) {
     setTitle(title)
     setYear(year)
     setImage(image)
@@ -33,19 +43,44 @@ function HomeCont() {
     setStarring(starring)
     setDirector(director) 
     setTrailer(trailer)
-  }   
+    setPictures(pictures)
+    setImdblink(imdblink)
 
+    window.scrollTo(0, 0)
+  }
+
+  function addToWatchlist() { 
+    setWatchlist(true)
+  } 
+
+ 
   return (  
     <div className="homecont">  
-      <Home openmovie={openMovie} trailer={trailer}/>
-      <Page router="movies" pagetitle="Movies" title={trendings[6].title} ratings={trendings[6].rating} image={trendings[6].cover} genre={trendings[6].genre} year={trendings[6].year} descript={trendings[6].descript}/>
-      <Page router="tvshows" pagetitle="TV Shows" title={tvs[0].title} ratings={tvs[0].rating} image={tvs[0].cover} genre={tvs[0].genre} year={tvs[0].year} descript={tvs[0].descript}/>
-      <Page router="favorites" pagetitle="Favorites" title={superheros[0].title} ratings={superheros[0].rating} image={superheros[0].cover} genre={superheros[0].genre} year={superheros[0].year} descript={superheros[0].descript}/> 
-      <Page router="watchlist" pagetitle="Watchlist" title={trendings[0].title} ratings={trendings[0].rating} image={trendings[0].cover} genre={trendings[0].genre} year={trendings[0].year} descript={trendings[0].descript}/>
-      <Page router="settings" pagetitle="settings"/> 
-      <MoviePage title={title} year={year} image={image} cover={cover} descript={descript} rating={rating} genre={genre} runtime={runtime} starring={starring} director={director} trailer={trailer}/>
+      <Switch>
+        <Route exact path="/">
+          <Home openmovie={openMovie} trailer={trailer} addtowatch={addToWatchlist}/>
+        </Route>
+        <Route path="/Movies">
+          <Movies openmovie={openMovie} trailer={trailer} />
+        </Route>          
+        <Route path="/Tvs">
+          <Tvs openmovie={openMovie} trailer={trailer} /> 
+        </Route> 
+        <Route path="/Favorites">
+          <Favorites openmovie={openMovie} trailer={trailer} />
+        </Route> 
+        <Route path="/Watchlist">
+          <Watchlist openmovie={openMovie} trailer={trailer} />
+        </Route>  
+        <Route path="/Settings">
+          <Settings />
+        </Route> 
+        <Route path="/MovieItem">
+          <MoviePage title={title} year={year} image={image} cover={cover} descript={descript} rating={rating} genre={genre} runtime={runtime} starring={starring} director={director} pictures={pictures} trailer={trailer} imdblink={imdblink} />
+        </Route>
+      </Switch>
     </div> 
   ) 
-} 
+}  
 
 export default HomeCont
