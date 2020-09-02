@@ -20,6 +20,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt2527338/",
       watchlist: false,
+      favorite: false,
   }, 
   {
       id: 2, 
@@ -36,6 +37,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt2527338/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 3,
@@ -52,6 +54,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt2527338/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 4,
@@ -68,6 +71,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt2527338/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 5,
@@ -84,6 +88,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt2527338/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 6,
@@ -100,6 +105,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt2527338/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 7,
@@ -117,6 +123,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt2527338/",
       watchlist: false,
+      favorite: false,
   } 
   ])
 
@@ -137,6 +144,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt2527338/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 2, 
@@ -154,6 +162,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt7126948/",
       watchlist: false,
+      favorite: false,
   },
   {  
       id: 9,
@@ -171,6 +180,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/z4PLWfJ.jpg","https://i.imgur.com/Ir7VIRs.jpg","https://i.imgur.com/hRB5Cel.jpg"],
       imdblink: "https://www.imdb.com/title/tt0816692/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 3,
@@ -188,6 +198,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt7286456/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 4,
@@ -205,6 +216,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt6723592/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 5, 
@@ -222,6 +234,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt6105098/",
       watchlist: false,
+      favorite: false,
   },
   {
       id: 6,
@@ -239,6 +252,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt6139732/",
       watchlist: false,
+      favorite: false,
   },
   { 
       id: 7,
@@ -256,6 +270,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt3089630/",
       watchlist: false,
+      favorite: false,
   }, 
   { 
       id: 8,
@@ -273,6 +288,7 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt1477834/",
       watchlist: false,
+      favorite: false,
   }, 
   {  
       id: 10,
@@ -290,7 +306,8 @@ const MovieContextProvider = (props) => {
       pictures: ["https://i.imgur.com/ItLDlek.png","https://i.imgur.com/0jD04SE.jpg","https://i.imgur.com/Rk0gWCB.jpg"],
       imdblink: "https://www.imdb.com/title/tt2527338/", 
       watchlist: false,
-   }, 
+      favorite: false,
+   },  
   ]) 
 
   const [classics, setClassics] = useState([

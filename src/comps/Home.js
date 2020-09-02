@@ -8,7 +8,7 @@ import MoviePage from './MoviePage'
     
 function Home(props) {  
     
-  const {populars, trendings, classics, general} = useContext(MovieContext)
+  const {populars, trendings, classics, tvs, general} = useContext(MovieContext)
 
   const rowtrendings = trendings.map(movie => { 
     return (  
@@ -25,7 +25,13 @@ function Home(props) {
       </div>
     )
   }) 
-
+  const rowtvs = tvs.map(movie => {
+    return (
+      <div className="box">
+         <MovieItem movie={movie} openmovie={props.openmovie} addtowatch={props.addtowatch} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} key={movie.id} />
+      </div>
+    ) 
+}) 
   const rowgeneral = general.map(movie => { 
     return (  
       <div className="box">
@@ -56,12 +62,14 @@ function Home(props) {
           <div className="clear"></div>
         <MovieRow films={rowgeneral} rowtitle="Movies" />
           <div className="clear"></div>   
+        <MovieRow films={rowtvs} rowtitle="Tv Shows" />
+          <div className="clear"></div>   
         <MovieRow films={rowclassics} rowtitle="Classics" />
           <div className="clear"></div>
         
       </div> 
     </div> 
   )
-}
+} 
 
 export default Home 

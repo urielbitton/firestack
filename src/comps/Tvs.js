@@ -4,9 +4,19 @@ import { MovieContext } from './MovieContext'
 import Feature from './Feature'
 
  
-function Tvs() {
+function Tvs(props) {
 
   const {tvs} = useContext(MovieContext)
+
+  function addToWatchlist() {
+    window.scrollTo(0, 0)
+    tvs.map((movie) => {
+        if (movie.id === props.movie.id) {
+            props.movie.watchlist = true;
+        }    
+        return    
+    })              
+  }
 
   return (  
     <div className="page watchlistpage">
@@ -24,7 +34,7 @@ function Tvs() {
                         <div className="boxinfo">
                             <h4>{tv.title}</h4>
                             <h5>{tv.year}</h5>   
-                            <i class="fas fa-plus"></i> 
+                            <i class="fas fa-plus" onClick={addToWatchlist}></i> 
                             <i className="far fa-heart"></i>
                             <small><i className="fas fa-clock"></i>{tv.runtime}</small>  
                         </div>

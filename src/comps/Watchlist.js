@@ -5,7 +5,30 @@ import { MovieContext } from './MovieContext'
 
 function Watchlist(props) {  
    
-  const {populars, trendings, classics, general} = useContext(MovieContext)
+  const {populars, trendings, classics, tvs,general} = useContext(MovieContext)
+ 
+  function remFromWatchlist() {
+    trendings.map((movie) => {
+        movie.watchlist = false;    
+        return    
+    })     
+    populars.map((movie) => {
+        movie.watchlist = false;  
+        return  
+    })
+    general.map((movie) => {
+      movie.watchlist = false; 
+      return  
+    }) 
+    tvs.map((movie) => {
+      movie.watchlist = false;  
+      return   
+  })
+    classics.map((movie) => {
+        movie.watchlist = false;  
+        return  
+    })         
+}
    
   return (  
     <div className="page watchlistpage">
@@ -24,7 +47,7 @@ function Watchlist(props) {
                         <div className="boxinfo">
                             <h4>{movie.title}</h4>
                             <h5>{movie.year}</h5>   
-                            <i className="fas fa-plus"></i>  
+                            <i class="fas fa-plus" style={{color:"var(--color)"}} onClick={remFromWatchlist}></i> 
                             <i className="far fa-heart"></i>
                             <small><i className="fas fa-clock"></i>{movie.runtime}</small>  
                         </div>
@@ -47,7 +70,7 @@ function Watchlist(props) {
                         <div className="boxinfo">
                             <h4>{movie.title}</h4>
                             <h5>{movie.year}</h5>   
-                            <i className="fas fa-plus"></i>  
+                            <i class="fas fa-times" onClick={remFromWatchlist}></i>  
                             <i className="far fa-heart"></i>
                             <small><i className="fas fa-clock"></i>{movie.runtime}</small>  
                         </div>
@@ -70,7 +93,7 @@ function Watchlist(props) {
                         <div className="boxinfo">
                             <h4>{movie.title}</h4>
                             <h5>{movie.year}</h5>   
-                            <i className="fas fa-plus"></i>  
+                            <i class="fas fa-times" onClick={remFromWatchlist}></i>  
                             <i className="far fa-heart"></i>
                             <small><i className="fas fa-clock"></i>{movie.runtime}</small>  
                         </div>
@@ -93,7 +116,7 @@ function Watchlist(props) {
                         <div className="boxinfo">
                             <h4>{movie.title}</h4>
                             <h5>{movie.year}</h5>   
-                            <i className="fas fa-plus"></i>  
+                            <i class="fas fa-times" onClick={remFromWatchlist}></i>  
                             <i className="far fa-heart"></i>
                             <small><i className="fas fa-clock"></i>{movie.runtime}</small>  
                         </div>
