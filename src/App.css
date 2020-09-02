@@ -30,6 +30,9 @@ html, body {
 .clear {
   clear: both;
 }
+.hidden {
+  display: none;
+}
 h1,h2,h3,h4,h5,h6,i,p,li,button,a,span,small,img,section {
   position: relative;
   margin: 0;
@@ -66,7 +69,7 @@ hr {
 }
 ::-webkit-scrollbar {
   display:block;
-  width:15px;
+  width:11px;
   border-radius: 40px;
 } 
 ::-webkit-scrollbar-track {
@@ -560,6 +563,7 @@ nav .profile img {
   margin-bottom:5px;
   font-size: 15px;
 }
+ 
 .onemoviegrid {
   position: relative;
   display: grid;
@@ -806,12 +810,18 @@ nav .profile img {
   border-radius: 10px;
   cursor: auto;
   padding:30px;
-  overflow-y: scroll;
   transform: scale(0.9);
   transition: all 0.3s;
   z-index: 2;
 }
-.addmovie::-webkit-scrollbar {
+.inneraddmovie {
+  position: relative;
+  height: 81%;
+  overflow-y: scroll;
+  margin-top: 15px;
+  padding-bottom: 30px;
+}
+.inneraddmovie::-webkit-scrollbar {
   display: none;
 }
 .addmovie h4 {
@@ -838,8 +848,22 @@ nav .profile img {
   font-size:18px;
   padding: 16px 14px;
   height: 100%;
+  color: #fff;
   background: var(--color);
+} 
+.addmoviegrid > h6 {
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s;
 }
+.addmoviegrid > h6:hover {
+  color: var(--color)
+}
+.addmoviegrid > h6 i {
+  margin-left: 15px;
+} 
 .addmoviegrid input {
   padding: 15px 10px;
   padding-left: 55px;
@@ -871,7 +895,7 @@ nav .profile img {
   color: #aaa;
 }
 .addmovie button {
-  margin-top: 50px;
+  margin-top: 13px;
   background: var(--color);
   padding: 15px 25px;
   border-radius: 10px;
