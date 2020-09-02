@@ -6,7 +6,7 @@ import AddMovie from './AddMovie';
 function Navbar() {
    
   useEffect(() => { 
-    const menulink = document.querySelectorAll('nav h6')
+    const menulink = document.querySelectorAll('nav .menu > a')
     const menuslide = document.querySelector('.menuslide')
     let menuclick = false 
     for(let item of menulink) {
@@ -33,6 +33,9 @@ function Navbar() {
         addmoviecont.style.opacity = "1"
         addmovie.style.transform = "scale(1)"
       }, 100); 
+      setTimeout(() => {
+        document.body.style.overflowY = "hidden"
+      }, 500);
     }
  
     const darkmode = document.querySelector('.darkmode')

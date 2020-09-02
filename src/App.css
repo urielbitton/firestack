@@ -153,17 +153,17 @@ nav .sidebtn {
   color: #bbb;
   transform: scale(0.95)
 }
-.menu h6:hover {
+.menu a:hover h6 {
   color: #000;
   transform: scale(1.05)
 }
-.menu h6:hover hr {
+.menu a:hover hr {
   opacity: 1;
 }
 .menu:hover h6 hr {
   bottom: -1px;
 }
-.menu h6:hover hr {
+.menu a:hover hr {
   bottom: 1px;
 }
 .menu .activemenu {
@@ -173,7 +173,7 @@ nav .sidebtn {
   opacity: 1;
 }  
 .menu h6 hr {
-  position: absolute;
+  position: absolute; 
   bottom: 0;
   width: 100%;
   height: 3px;

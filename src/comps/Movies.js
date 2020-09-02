@@ -1,16 +1,23 @@
 import React, {useContext} from 'react'
 import { MovieContext } from './MovieContext'
-import Page from './Page'
+import Feature from './Feature'
+
 
 function Movies() {
 
-  const {populars, trendings, classics, superheros, moviePage} = useContext(MovieContext)
+  const {populars, trendings, classics, general} = useContext(MovieContext)
 
-  return (
-    <>
-      <Page pagetitle="Movies" title={trendings[6].title} ratings={trendings[6].rating} image={trendings[6].cover} genre={trendings[6].genre} year={trendings[6].year} descript={trendings[6].descript}/>
-    </>
-  )
+  return (  
+    <div className="page watchlistpage">
+      <Feature title={trendings[6].title} cover={trendings[6].cover} rating={trendings[6].ratings} genre={trendings[6].genre} year={trendings[6].year} descript={trendings[6].descript} trailer={trendings[6].trailer}/>
+      <div className="grid">
+        <h1>Movies</h1>
+        <div className="spacer"></div> 
+
+        <div className="spacer"></div>
+      </div> 
+    </div>   
+  ) 
 }
 
-export default Movies 
+export default Movies

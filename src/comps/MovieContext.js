@@ -280,7 +280,7 @@ const MovieContextProvider = (props) => {
       year: 2019,
       image: "https://i.imgur.com/8LqPjy5.jpg",
       cover: "https://i.imgur.com/bhF3okW.png",
-      genre: "Action, SUperhero",
+      genre: "Action, Superhero",
       rating: 7481,
       descript: "After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.",
       runtime: "3:02",
@@ -392,10 +392,12 @@ const MovieContextProvider = (props) => {
       id: 2,
       title: "Breaking Bad",
       year: "2008-2013",
-      image: "",
-      cover: "",
+      image: "https://i.imgur.com/tTt1uLV.jpg",
+      cover: "https://i.imgur.com/TBB2kMD.jpg",
       descript: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
-      genre: "Drama, Crime"
+      genre: "Drama, Crime",
+      rating: 9883,
+      trailer: "https://www.youtube.com/embed/HhesaQXLuRY"
   } 
   ])
 

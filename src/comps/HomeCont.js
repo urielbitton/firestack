@@ -23,10 +23,10 @@ function HomeCont() {
   const [rating, setRating] = useState(0)
   const [genre, setGenre] = useState("") 
   const [runtime, setRuntime] = useState("")
-  const [starring, setStarring] = useState([])
-  const [director, setDirector] = useState("")
+  const [starring, setStarring] = useState(["","",""])
+  const [director, setDirector] = useState(["",""])
   const [trailer, setTrailer] = useState("")
-  const [pictures, setPictures] = useState([])
+  const [pictures, setPictures] = useState(["","",""])
   const [imdblink, setImdblink] = useState("")
   const [watchlist, setWatchlist] = useState(false)
 
@@ -59,7 +59,7 @@ function HomeCont() {
       <Switch>
         <Route exact path="/">
           <Home openmovie={openMovie} trailer={trailer} addtowatch={addToWatchlist}/>
-        </Route>
+        </Route> 
         <Route path="/Movies">
           <Movies openmovie={openMovie} trailer={trailer} />
         </Route>          
