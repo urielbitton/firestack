@@ -13,7 +13,7 @@ function App() {
       <Router>
         <MovieContextProvider>  
         <Navbar />
-        <MenuSlide />
+        <MenuSlide /> 
         <HomeCont />  
         </MovieContextProvider>
       </Router>  

@@ -10,7 +10,6 @@ import Tvs from './Tvs'
 import Favorites from './Favorites'
 import Watchlist from './Watchlist'
 import Settings from './Settings'
-   
        
 function HomeCont() {
 

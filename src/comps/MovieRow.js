@@ -37,8 +37,7 @@ function MovieRow(props) {
         <>
         <h5 className="sectiontitle">{props.rowtitle}<hr/></h5>
          <div className="movierow">   
-            <div className="innerrow">
-                
+            <div className="innerrow"> 
                 {props.films}
             </div>   
         </div>

@@ -59,6 +59,9 @@ function Navbar() {
           document.querySelector('.searchcont').style.opacity = "1"
           document.querySelector('.searchcont').style.transform = "scale(1)"
         }, 100);
+        setTimeout(() => {
+          document.body.style.overflowY = "hidden"
+        }, 500);
     }
 
   },[]) 

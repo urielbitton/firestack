@@ -4,7 +4,7 @@ import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
  
 function MovieItem(props) {
 
-    const {populars, trendings, classics, general, tvs} = useContext(MovieContext)
+    const {populars, trendings, classics, general, tvs, superheros} = useContext(MovieContext)
 
     function addToWatchlist() {
         window.scrollTo(0, 0)
@@ -13,7 +13,8 @@ function MovieItem(props) {
         populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
         classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
         general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})     
-        tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})       
+        tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})
+        superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})       
     } 
     function addToFav() { 
         window.scrollTo(0, 0)
@@ -23,10 +24,10 @@ function MovieItem(props) {
         classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
         general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
         tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
-                    
+        superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""})                    
     }
-      
-    return (  
+        
+    return (    
         <div className="item"> 
             <img src={props.image} alt="movie"/>
             <div className="boxcover"> 
@@ -34,15 +35,16 @@ function MovieItem(props) {
                 <div className="boxinfo">
                     <h4>{props.title}</h4>
                     <h5>{props.year}</h5>   
-                    <Link to="/Watchlist"><i className="fas fa-plus"
+                    <Link to="/Watchlist"><i className={props.watchlist?"fas fa-check":"fas fa-plus"}
                     onClick={addToWatchlist} 
-                    ></i>
+                    ></i> 
                     </Link>  
-                    <Link to="/Favorites"><i className="far fa-heart" 
+                    <Link to="/Favorites"><i className={props.favorite?"fas fa-heart":"far fa-heart"} 
                     onClick={addToFav}></i>
                     </Link>
-                    <small><i className="fas fa-clock"></i>{props.runtime}</small>  
-                </div>
+                    <small><i className="fas fa-clock"></i><span>{props.runtime}</span></small>  
+                    <small><i class="fab fa-imdb"></i><span>{props.rate}</span></small>
+                </div>   
             </div>     
         </div>   
     )   

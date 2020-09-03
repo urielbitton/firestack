@@ -23,9 +23,9 @@ function Feature(props) {
       }, 100);
     }  
     
-  },[]) 
-       
-  function addToWatchlist() {
+  },[])  
+        
+  function addToWatchlist() { 
     window.scrollTo(0, 0)  
 
     trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})  
@@ -53,7 +53,7 @@ function Feature(props) {
           <span>{props.rating} ratings</span>
           <span>•</span>
           <span>{props.genre}</span>  
-          <span>•</span>
+          <span>•</span> 
           <span>{props.year}</span>   
         </small>
         <p className="featdescript">{props.descript}</p>
@@ -62,14 +62,14 @@ function Feature(props) {
           { props.starring?(props.starring[0]):"" }, { props.starring?(props.starring[1]):"" }, { props.starring?(props.starring[2]):"" }
         </p>   
         <button className="watchnowbtn"><i className="far fa-play-circle"></i>Watch Now</button>
-        <Link to="/Watchlist"><button className="watchlist" onClick={addToWatchlist}><i className={props.watchlist?"fas fa-heart":"far fa-heart"}></i>{props.watchlist?"Added To Watchlist":"Add To Watchlist"}</button></Link>
+        <Link to="/Watchlist"><button className="watchlist" onClick={addToWatchlist}><i className={props.watchlist?"fas fa-check":"fas fa-plus"}></i>{props.watchlist?"Added To Watchlist":"Add To Watchlist"}</button></Link>
       </div>    
     </div>  
     <div className="spacer"></div> 
  
-    <Lightbox trailer={props.trailer}/>
+    <Lightbox trailer={props.trailer}/> 
     <Notifs />
- 
+  
     </>  
   ) 
 }  

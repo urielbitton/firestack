@@ -117,7 +117,7 @@ hr {
 
 nav {
   position: fixed;
-  top: 0;
+  top: 0;  
   width: 100%;
   text-align: center;
   background: #fff;
@@ -444,6 +444,17 @@ nav .profile img {
 .page .box {
   float: none;
   display: inline-block;
+}  
+.pagegrid {
+  display: grid; 
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.pagegrid .box {
+  margin: 40px auto;
+}
+.box .fa-clock:hover { 
+  color: #fff;
 }
 .page .starring {
   display: none;
@@ -517,14 +528,22 @@ nav .profile img {
   margin-top: 10px;
   cursor: pointer;
   margin-right: 8px;
-} 
+}  
 .boxinfo small {
   color: #fff;
   font-size:16px;
+  margin-right: 10px;
 }
+.boxinfo small span {
+  font-size: 15px;
+  top: -1px;
+} 
 .boxinfo i:hover {
   color: var(--color)
 }
+.boxinfo .fa-imdb {
+  font-size: 19px;
+} 
 
 .featureplaybtn {
   position: absolute;
@@ -906,7 +925,6 @@ nav .profile img {
 .addmovie button:hover {
   filter: brightness(90%);
 }
-
 
 
 

@@ -12,7 +12,7 @@ function Favorites(props) {
     if(movie.favorite) 
     return (  
       <div className="box">
-        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} key={movie.id} />
+        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} key={movie.id} />
       </div>  
       ) 
       return  
@@ -21,7 +21,7 @@ function Favorites(props) {
     if(movie.favorite) 
     return (  
       <div className="box">
-        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} key={movie.id} />
+        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} key={movie.id} />
       </div>  
       ) 
       return  
@@ -30,7 +30,7 @@ function Favorites(props) {
     if(movie.favorite) 
     return (  
       <div className="box">
-        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} key={movie.id} />
+        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} key={movie.id} />
       </div>  
       ) 
       return  
@@ -39,7 +39,7 @@ function Favorites(props) {
     if(movie.favorite) 
     return (  
       <div className="box">
-        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} key={movie.id} />
+        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} key={movie.id} />
       </div>  
       ) 
       return  
@@ -48,15 +48,15 @@ function Favorites(props) {
     if(movie.favorite) 
     return (  
       <div className="box">
-        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} key={movie.id} />
+        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} key={movie.id} />
       </div>  
       ) 
       return  
   })
-   
+    
   return (   
-    <div className="page">
-      <Feature title={populars[4].title} cover={populars[4].cover} rating={populars[4].ratings} genre={populars[4].genre} year={populars[4].year} descript={populars[4].descript} trailer={populars[4].trailer}/>
+    <div className="page favoritespage">
+      <Feature movie={populars[4]} title={populars[4].title} cover={populars[4].cover} rating={populars[4].rating} genre={populars[4].genre} year={populars[4].year} descript={populars[4].descript} trailer={populars[4].trailer} watchlist={populars[4].watchlist}/>
       <div className="grid">
         <h1>Favorites</h1>
         <div className="spacer"></div>
