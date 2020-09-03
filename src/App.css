@@ -366,7 +366,7 @@ nav .profile img {
   font-size: 15px;
   color: #fff;
   z-index: 10;
-}
+} 
 .feature .watchnowbtn:hover {
   filter: brightness(85%);
 } 
@@ -379,7 +379,10 @@ nav .profile img {
 }
 .feature .watchlist:hover {
   background:rgba(255,255,255,0.4)
-} 
+}  
+.page .box {
+  margin-bottom: 50px;
+}
   
 .home {
   position: relative;
@@ -413,14 +416,16 @@ nav .profile img {
   will-change: transform;
   user-select: none;
   transition: all 0.2s;
-} 
+}  
 .movierow:active {
   cursor: grabbing;
   cursor: -webkit-grabbing;
 }
 .innerrow {
   position: relative;
-  width: 500%;
+}
+.movierow .box:first-child:hover {
+  margin-left: 30px;
 }
 .movierow::-webkit-scrollbar, .imageslider::-webkit-scrollbar {
   display:none;
@@ -776,10 +781,7 @@ nav .profile img {
   font-size: 32px;
   transform: scaleX(1.2);
   padding: 8px;
-}
-.watchlistpage .watchlist {
-  display: none;
-}
+} 
 .addmoviecont {
   position: fixed;
   top: 0;
@@ -929,19 +931,24 @@ nav .profile img {
   .addmovie {
     width: 80%;
   }
-}
+} 
 
 @media (max-width:1200px) {
   .onemoviegrid {
     grid-template-columns: 1fr 2fr;
     grid-gap: 10px;
   }
-  
+   
 } 
-@media (max-width:1080px) {
+@media (max-width:1150px) {
   nav .menu {
     display: none;
   }
+  nav {
+    height: 70px;
+  }
+} 
+@media (max-width:1080px) {
   .moviepage .featureplaybtn {
     display: none;
   }

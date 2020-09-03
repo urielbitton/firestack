@@ -49,22 +49,18 @@ function HomeCont() {
     window.scrollTo(0, 0)
   }
 
-  function addToWatchlist() { 
-    setWatchlist(true)
-  } 
-
- 
+  
   return (  
     <div className="homecont">  
       <Switch>
         <Route exact path="/">
-          <Home openmovie={openMovie} trailer={trailer} addtowatch={addToWatchlist}/>
+          <Home openmovie={openMovie} trailer={trailer} />
         </Route> 
         <Route path="/Movies">
           <Movies openmovie={openMovie} trailer={trailer} />
         </Route>          
         <Route path="/Tvs">
-          <Tvs openmovie={openMovie} trailer={trailer} /> 
+          <Tvs openmovie={openMovie} trailer={trailer}/> 
         </Route> 
         <Route path="/Favorites">
           <Favorites openmovie={openMovie} trailer={trailer} />

@@ -1,28 +1,29 @@
 import React, {useContext} from 'react'
-import { MovieContext } from './MovieContext'
+import { MovieContext, MovieContextProvider } from './MovieContext'
 import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
  
 function MovieItem(props) {
 
-    const {populars, trendings, classics} = useContext(MovieContext)
+    const {populars, trendings, classics, general, tvs} = useContext(MovieContext)
 
     function addToWatchlist() {
         window.scrollTo(0, 0)
-        trendings.map((movie) => {
-            if (movie.id === props.movie.id) {
-                props.movie.watchlist = true;
-            }   
-            return    
-        })             
+
+        trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})  
+        populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
+        classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
+        general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})     
+        tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})       
     } 
-    function addToFav() {
+    function addToFav() { 
         window.scrollTo(0, 0)
-        trendings.map((movie) => {
-            if (movie.id === props.movie.id) {
-                props.movie.favorite = true;
-            }   
-            return   
-        })            
+         
+        trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
+        populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
+        classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
+        general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
+        tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
+                    
     }
       
     return (  
@@ -36,7 +37,7 @@ function MovieItem(props) {
                     <Link to="/Watchlist"><i className="fas fa-plus"
                     onClick={addToWatchlist} 
                     ></i>
-                    </Link> 
+                    </Link>  
                     <Link to="/Favorites"><i className="far fa-heart" 
                     onClick={addToFav}></i>
                     </Link>

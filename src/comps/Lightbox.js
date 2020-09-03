@@ -1,11 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-function Lightbox(props) {
+function Lightbox(props) { 
+
+  useEffect(() => {
+    const lightboxcont = document.querySelector('.lightboxcont')
+    const lightbox = document.querySelector('.lightbox')
+    lightboxcont.addEventListener("click", closeLightbox)
+    lightbox.addEventListener("click", preventClose)
+ 
+    function closeLightbox() {
+      lightbox.style.transform = "scale(0.9)"
+      setTimeout(() => {
+        lightboxcont.style.opacity = "0"
+      }, 50); 
+      setTimeout(() => {   
+        lightboxcont.style.display = "none"
+      }, 150); 
+    }        
+    function preventClose(e) {
+      e.stopImmediatePropagation()
+    }
+
+  },[])  
+  
   return (
-    <div className="lightbox">
-      <iframe src={props.trailer} title="trailer" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-    </div>
-  )
+    <div className="lightboxcont">
+      <i className="close"></i>
+      <div className="lightbox">
+        <iframe src={"https://www.youtube.com/embed/"+props.trailer} title="trailer" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+      </div>
+    </div> 
+  ) 
 }
  
 export default Lightbox

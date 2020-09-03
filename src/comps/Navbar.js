@@ -104,8 +104,8 @@ function Navbar() {
       <label>
       <input placeholder="Search" className="navsearch"/> 
       </label>
-      <i class="fas fa-adjust darkmode"></i>
-      <i class="fas fa-folder-plus addmoviebtn"></i>
+      <i className="fas fa-adjust darkmode"></i>
+      <i className="fas fa-folder-plus addmoviebtn"></i>
     </div> 
     </nav>
     <div style={{height:'65px'}}></div>
