@@ -633,7 +633,7 @@ nav .profile img {
   font-weight: 500;
   color: #777;
   margin-bottom: 50px;
-}  
+}   
 .onemovieinfo h6 {
   float: left;
   text-align: center;
@@ -641,6 +641,7 @@ nav .profile img {
   font-weight: 500;
   margin: 10px auto;
   margin-right: 50px; 
+  width: 120px;
 }
 .onemovieinfo h6 span {
   text-align: center;
@@ -738,24 +739,26 @@ nav .profile img {
   position: fixed;
   bottom: 20px;
   left: 20px;
+  transition: all 0.3s;
+  opacity: 0;
+  transform: scale(0.9);
+  display: none;
   background: rgba(0,0,0,0.95);
   min-width: 400px;
   padding: 20px 40px;
   border-radius: 10px;
   box-shadow: 0 1px 20px rgba(0,0,0,0.5);
   color: #eee;
-  transition: all 0.3s;
-  opacity: 0;
-  transform: scale(0.9);
-  display: none;
   z-index: 999;
 }
 .notifcont p {
   font-size: 14px;
   color: #ddd;
   display: inline-block;
-  margin-left: 20px;
 } 
+.notifcont .fa-circle-notch {
+  margin-right: 20px;
+}
 .notifcont .close {
   position: relative;
   margin-left: 20px;
@@ -930,7 +933,7 @@ nav .profile img {
   height:30%;
   width: 30%;
   position: absolute;
-  left: 50px;
+  right: 50px;
   right: 0;
   margin: auto;
   margin-top: 17px; 
@@ -1084,3 +1087,14 @@ nav .profile img {
     margin-left: 0;
   }
 }
+
+@media (max-height: 850px) {
+  .addmovie {
+    height: 80vh;
+  }
+}
+@media (max-height: 650px) {
+  .addmovie {
+    height: 90vh;
+  }
+} 

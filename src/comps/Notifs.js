@@ -13,7 +13,7 @@ function Notifs(props) {
         notifcont.style.display = "none"
       }, 100);
     }      
-  },[])   
+  },[])    
 
   return (
     <div class="notifcont">

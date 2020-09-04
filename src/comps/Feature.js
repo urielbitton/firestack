@@ -2,7 +2,6 @@ import React, {useContext, useEffect, useState} from 'react'
 import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
 import Lightbox from './Lightbox'
 import { MovieContext } from './MovieContext'
-import Notifs from './Notifs'
      
 
 function Feature(props) {
@@ -68,7 +67,6 @@ function Feature(props) {
     <div className="spacer"></div> 
  
     <Lightbox trailer={props.trailer}/> 
-    <Notifs />
   
     </>  
   ) 

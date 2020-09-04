@@ -4,7 +4,6 @@ import Home from './Home'
 import Page from './Page'
 import MoviePage from './MoviePage'
 import { MovieContext } from './MovieContext'
-import Notifs from './Notifs'
 import Movies from './Movies'
 import Tvs from './Tvs'
 import Favorites from './Favorites'
@@ -12,6 +11,7 @@ import Watchlist from './Watchlist'
 import Settings from './Settings'
 import Navbar from './Navbar'
 import MenuSlide from "./MenuSlide";
+import Notifs from './Notifs'
        
 function HomeCont() {
 
@@ -78,8 +78,10 @@ function HomeCont() {
           <MoviePage title={title} year={year} image={image} cover={cover} descript={descript} rating={rating} genre={genre} runtime={runtime} starring={starring} director={director} pictures={pictures} trailer={trailer} imdblink={imdblink} />
         </Route>
       </Switch>
+
+
     </div> 
-  ) 
+  )  
 }  
 
 export default HomeCont

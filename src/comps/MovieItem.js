@@ -1,32 +1,65 @@
-import React, {useContext} from 'react'
+import React, {useContext, useEffect} from 'react'
 import { MovieContext, MovieContextProvider } from './MovieContext'
 import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
  
 function MovieItem(props) {
-
+ 
     const {populars, trendings, classics, general, tvs, superheros} = useContext(MovieContext)
+    const movietitle = props.title
+    const notifcont = document.createElement('DIV')
+    notifcont.classList.add('notifcont')
 
-    function addToWatchlist() {
-        window.scrollTo(0, 0)
-
+    function watchListFuncs() {
         trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})  
         populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
         classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
         general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})     
         tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})
-        superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})       
-    } 
-    function addToFav() { 
-        window.scrollTo(0, 0)
-         
+        superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
+        //drop notifications
+        notifcont.remove()
+        notifcont.innerHTML = "<i class='fas fa-circle-notch'></i><p>"+movietitle+" has been added to your watchlist.</p><i className='close'></i>"
+        document.body.appendChild(notifcont)
+        notifcont.style.display = "block" 
+        setTimeout(() => {
+            notifcont.style.opacity = "1"
+            notifcont.style.transform = "scale(1)"         
+        }, 100)
+        setTimeout(() => {
+            notifcont.style.opacity = ""
+            notifcont.style.transform = "" 
+            setTimeout(() => {
+                notifcont.style.display = "block"
+                notifcont.remove()           
+            }, 100) 
+        }, 5000); 
+    }    
+    function favoritesFuncs() { 
         trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
         populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
         classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
         general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
         tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
-        superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""})                    
-    }
-        
+        superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""})          
+        //drop notifications
+        notifcont.remove()
+        notifcont.innerHTML = "<i class='fas fa-circle-notch'></i><p>"+movietitle+" has been added to favorites.</p><i className='close'></i>"
+        document.body.appendChild(notifcont)
+        notifcont.style.display = "block"
+        setTimeout(() => {
+            notifcont.style.opacity = "1"
+            notifcont.style.transform = "scale(1)"         
+        }, 100)
+        setTimeout(() => {
+            notifcont.style.opacity = ""
+            notifcont.style.transform = "" 
+            setTimeout(() => {
+                notifcont.style.display = "block"
+                notifcont.remove()           
+            }, 100)  
+        }, 5000);
+    }  
+   
     return (    
         <div className="item"> 
             <img src={props.image} alt="movie"/>
@@ -35,13 +68,10 @@ function MovieItem(props) {
                 <div className="boxinfo">
                     <h4>{props.title}</h4>
                     <h5>{props.year}</h5>   
-                    <Link to="/Watchlist"><i className={props.watchlist?"fas fa-check":"fas fa-plus"}
-                    onClick={addToWatchlist} 
-                    ></i> 
-                    </Link>  
-                    <Link to="/Favorites"><i className={props.favorite?"fas fa-heart":"far fa-heart"} 
-                    onClick={addToFav}></i>
-                    </Link>
+                    <i className={props.watchlist?"fas fa-check":"fas fa-plus"}
+                    onClick={!props.watchlist?watchListFuncs:""}></i> 
+                    <i className={props.favorite?"fas fa-heart":"far fa-heart"} 
+                    onClick={!props.favorite?favoritesFuncs:""}></i>
                     <small><i className="fas fa-clock"></i><span>{props.runtime}</span></small>  
                     <small><i class="fab fa-imdb"></i><span>{props.rate}</span></small>
                 </div>   

@@ -5,6 +5,8 @@ function Lightbox(props) {
   useEffect(() => {
     const lightboxcont = document.querySelector('.lightboxcont')
     const lightbox = document.querySelector('.lightbox')
+    const iframe = document.querySelector('iframe')
+
     lightboxcont.addEventListener("click", closeLightbox)
     lightbox.addEventListener("click", preventClose)
  
@@ -15,11 +17,16 @@ function Lightbox(props) {
       }, 50); 
       setTimeout(() => {   
         lightboxcont.style.display = "none"
-      }, 150); 
+        let source = iframe.src
+        iframe.src = ""
+        iframe.src = source
+      }, 150);  
     }        
     function preventClose(e) {
       e.stopImmediatePropagation()
     }
+    
+
 
   },[])  
   
