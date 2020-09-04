@@ -43,7 +43,6 @@ img {
 }
 button {
   outline: none;
-  position: relative;
   cursor: pointer;
   border: none;
   transition: all 0.2s;
@@ -186,7 +185,7 @@ nav .sidebtn {
   transition: all 0.2s;
 }
 nav label {
-  float: right;
+  float: right; 
   position: relative; 
   top: 18px;
 }
@@ -199,7 +198,7 @@ nav input {
   transition: all 0.3s;
 }
 nav input:focus {
-  width: 300px;
+  width: 220px;
 }
 nav input::placeholder {
   color: #aaa
@@ -226,7 +225,7 @@ nav .profile img {
   transition: all 0.2s;
 } 
 .darkmode:hover {
-  color:#333;
+  color:var(--color);
 }
 .addmoviebtn:hover {
   color: var(--color)
@@ -453,7 +452,7 @@ nav .profile img {
 .pagegrid .box {
   margin: 40px auto;
 }
-.box .fa-clock:hover { 
+.box .fa-clock:hover, .box .fa-imdb:hover { 
   color: #fff;
 }
 .page .starring {
@@ -498,7 +497,7 @@ nav .profile img {
 }
 .boxinfo {
   position: absolute;
-  bottom: 75px;
+  bottom: 85px;
   cursor: default;
   width: 100%;
   height: 50px;
@@ -507,14 +506,14 @@ nav .profile img {
   transition: all 0.5s;
 }
 .box:hover .boxinfo {
-  bottom: 55px;
+  bottom: 65px;
 }
 .box:hover .playbtn {
   transform:scale(1.02);
 }
 .boxinfo h4 {
   color: #fff;
-  font-size:13px;
+  font-size:15px;
   font-weight: 500;
 }
 .boxinfo h5 {
@@ -769,7 +768,7 @@ nav .profile img {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background: rgba(255,255,255,0.9);
   display: none;
   opacity: 0;
@@ -785,10 +784,12 @@ nav .profile img {
   border: none;
   text-align: center;
   font-size:35px;
-  margin-top: 100px;
+  margin-top: 50px;
   background: none;
   padding-bottom: 20px;
   color: #111;
+  border-bottom: 2px solid #ccc;
+  transition: all 0.3s;
 }
 .searchcont input:focus {
   border-bottom: 2px solid #111;
@@ -801,6 +802,31 @@ nav .profile img {
   transform: scaleX(1.2);
   padding: 8px;
 } 
+.searchcont .box img {
+  left: 0; 
+}
+.searchgrid {
+  position: relative;
+  overflow: scroll;
+  padding: 60px;
+  height: 85%;
+  text-align: center;
+}
+.searchgrid .box {
+  position: relative;
+  margin: 50px 30px;
+  opacity: 0; 
+  display: none;
+  transform: scale(0.9);
+} 
+.searchgrid::-webkit-scrollbar {
+  display: none;
+}
+.searchgrid .emptymsg {
+  color: #555;
+  font-weight: 500;
+  font-size: 20px;
+}
 .addmoviecont {
   position: fixed;
   top: 0;
@@ -925,17 +951,81 @@ nav .profile img {
 .addmovie button:hover {
   filter: brightness(90%);
 }
+.filterdiv {
+  position: relative;
+  margin-top: 30px;
+}
+.filterdiv h5 {
+  display: inline-block;
+  font-size: 15px;
+  color: #999;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+} 
+.filterdiv h5 span {
+  margin-left: 10px;
+  left: 0;
+  font-size: 20px;
+  top: 2px;
+  transition: left 0.3s;
+}
+.filterdiv h5:hover {
+  color: var(--color)
+}
+.filterdiv h5:hover span {
+  left: 5px;
+}
+.filterdiv h5 i {
+  margin-right: 10px;
+  top: 1px;
+}
+.filterdiv h6 {
+  display: inline-block;
+  margin: auto 10px;
+  font-size: 14px;
+  color: #aaa;
+  font-weight: 600;
+  padding: 3px 10px;
+  border: 2px solid #aaa;
+  border-radius: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+  border-color: #eee
+} 
+.filterdiv h6:hover {
+  color: #fff;
+  background: var(--color);
+  border-color: var(--color);
+}
+.filterdiv h6 i {
+  margin-left: 5px;
+}
+.filterdiv small {
+  color: #333;
+  font-weight: 500;
+  margin-right: 10px;
+  margin-left: 50px;
+}
+.filterdiv input {
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid #eee;
+  padding: 7px 10px;
+  transition: all 0.3s;
+  width: 200px;
+}
+.filterdiv input::placeholder {
+  color: #ccc;
+}
+.filterdiv input:focus {
+  border-color: #aaa;
+  width: 300px;
+}
+ 
 
 
-
-
-
-
-
-
-
-
-
+  
 
 
 
@@ -974,7 +1064,15 @@ nav .profile img {
     width: 80%;
   }
   .addmovie {
-    width: 90%;
+    width: 90%; 
+  }
+}
+@media (max-width:900px) {
+  .menuslide {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  }
+  .menuslide > a:last-child {
+    margin-bottom: 70px;
   }
 }
 @media (max-width:700px) {

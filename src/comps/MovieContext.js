@@ -41,7 +41,7 @@ const [trendings, setTrendings] = useState([
     imdblink: "https://www.imdb.com/title/tt7126948/",
     watchlist: false,
     favorite: false,
-    rate: 8,
+    rate: 8.0,
 },
 {  
     id: 9,
@@ -98,7 +98,7 @@ const [trendings, setTrendings] = useState([
     imdblink: "https://www.imdb.com/title/tt6723592/",
     watchlist: false,
     favorite: false,
-    rate: 9,
+    rate: 9.0,
 },
 {
     id: 5, 
@@ -136,7 +136,7 @@ const [trendings, setTrendings] = useState([
     imdblink: "https://www.imdb.com/title/tt6139732/",
     watchlist: false,
     favorite: false,
-    rate: 7,
+    rate: 7.0,
 },
 { 
     id: 7,
@@ -341,6 +341,7 @@ const [trendings, setTrendings] = useState([
         image: "https://imgur.com/UmVuDT4.jpg",
         genre: "Drama, Superhero, Thriller",
         runtime: "2:20",
+        rate: 6.6,
     }, 
     {
         id: 2,
@@ -348,15 +349,17 @@ const [trendings, setTrendings] = useState([
         year: 2010, 
         image: "https://imgur.com/8kRzl5X.jpg",
         genre: "Psychological Thriller",
-        runtime: "2:00"
+        runtime: "2:00",
+        rate: 6.6,
     },
-    {
-        id: 3,
+    { 
+        id: 3, 
         title: "The Matrix",
         year: 1999,
         image: "https://imgur.com/htUqljV.jpg",
         genre: "Psychological Thriller",
-        runtime: "1:45"
+        runtime: "1:45",
+        rate: 6.6,
     },
     {
         id: 4,
@@ -364,7 +367,8 @@ const [trendings, setTrendings] = useState([
         year: 2004,
         image: "https://imgur.com/7qxnpFf.jpg",
         genre: "Action, Adventure",
-        runtime: "1:40"
+        runtime: "1:40",
+        rate: 6.6,
     },
     {
         id: 5,
@@ -380,7 +384,8 @@ const [trendings, setTrendings] = useState([
         year: 2002,
         image: "https://imgur.com/LdDVlpx.jpg",
         genre: "Action, Superhero",
-        runtime: "1:46"
+        runtime: "1:46",
+        rate: 6.6,
     },
     {
         id: 7,
@@ -388,7 +393,8 @@ const [trendings, setTrendings] = useState([
         year: 1986,
         image: "https://imgur.com/VGkrtRv.jpg",
         genre: "Sci-fi, Adventure",
-        runtime: "1:40"
+        runtime: "1:40",
+        rate: 6.6,
     },
     {
         id: 8, 
@@ -396,7 +402,8 @@ const [trendings, setTrendings] = useState([
         year: 2005,
         image: "https://imgur.com/DPVzeX3.jpg",
         genre: "Adventure",
-        runtime: "2:40"
+        runtime: "2:40",
+        rate: 6.6,
     },
     {
         id: 9,
@@ -404,7 +411,8 @@ const [trendings, setTrendings] = useState([
         year: 2002,
         image: "https://imgur.com/QXN9zCP.jpg",
         genre: "Adventure",
-        runtime: "2:11"
+        runtime: "2:11",
+        rate: 6.6,
     },
     {
         id: 10,
@@ -412,7 +420,8 @@ const [trendings, setTrendings] = useState([
         year: 2004,
         image: "https://imgur.com/upCRXCJ.jpg",
         genre: "Adventure, War",
-        runtime: "1:40"
+        runtime: "1:40",
+        rate: 6.6,
     },
   ])
 
@@ -469,7 +478,8 @@ const [trendings, setTrendings] = useState([
       genre: "Superhero, Action",
       ratings: 4744,
       runtime: "2:06",
-      trailer: "tmeOjFno6Do"
+      trailer: "tmeOjFno6Do",
+      rate: 6.6,
   } 
   ]) 
   const [general, setGeneral] = useState([
@@ -483,7 +493,8 @@ const [trendings, setTrendings] = useState([
       genre: "Science Fiction",
       ratings: 2724,
       runtime: "1:46",
-      trailer: "gCcx85zbxz4"
+      trailer: "gCcx85zbxz4",
+      rate: 6.6,
     },
     { 
         id: 2,
@@ -495,7 +506,8 @@ const [trendings, setTrendings] = useState([
         genre: "Mystery, Comedy",
         ratings: 4324,
         runtime: "1:56",
-        trailer: "xi-1NchUqMA"
+        trailer: "xi-1NchUqMA",
+        rate: 6.6,
     },
   ]) 
  

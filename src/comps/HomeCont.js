@@ -10,6 +10,8 @@ import Tvs from './Tvs'
 import Favorites from './Favorites'
 import Watchlist from './Watchlist'
 import Settings from './Settings'
+import Navbar from './Navbar'
+import MenuSlide from "./MenuSlide";
        
 function HomeCont() {
 
@@ -48,9 +50,11 @@ function HomeCont() {
     window.scrollTo(0, 0)
   }
 
-  
+   
   return (  
     <div className="homecont">  
+      <Navbar openmovie={openMovie}/>
+      <MenuSlide />
       <Switch>
         <Route exact path="/">
           <Home openmovie={openMovie} trailer={trailer} />

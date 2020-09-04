@@ -42,7 +42,7 @@ function Feature(props) {
         <img className="featurecover" src={props.cover} alt="featimg"/>
       </div>
       <div className="grid">
-        <i class="far fa-play-circle featureplaybtn"></i>
+        <i className="far fa-play-circle featureplaybtn"></i>
         <h1>{props.title}</h1>
         <small>
           <i className="fas fa-star"></i> 
@@ -55,7 +55,7 @@ function Feature(props) {
           <span>{props.genre}</span>  
           <span>•</span> 
           <span>{props.year}</span>   
-        </small>
+        </small> 
         <p className="featdescript">{props.descript}</p>
         <p className="starring">
           <span>Starring</span>

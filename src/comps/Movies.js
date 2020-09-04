@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import { MovieContext } from './MovieContext'
 import Feature from './Feature'
 import MovieItem from './MovieItem'
@@ -49,33 +49,48 @@ function Movies(props) {
       return 
   })  
 
-  const allmovies = [shuffle(rowtrendings),shuffle(rowpopulars),shuffle(rowclassics),shuffle(rowgeneral),shuffle(rowsuperheros)]
-
+  const allmovies = rowtrendings.concat(rowpopulars, rowclassics.concat(rowgeneral, rowsuperheros))
+  let themovies = allmovies
+ 
+  function filterYear() {
+    themovies = allmovies.map(el => {
+      if(el.props.children.props.year > 2019)
+        return el
+    })
+  }
+  
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
-    // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-      // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex -= 1;
-      // And swap it with the current element.
       temporaryValue = array[currentIndex];
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-  
-    return array;
+    return array; 
   }
- 
+     
   return (   
     <div className="page watchlistpage">
       <Feature movie={trendings[6]} title={trendings[6].title} cover={trendings[6].cover} rating={trendings[6].rating} genre={trendings[6].genre} year={trendings[6].year} descript={trendings[6].descript} trailer={trendings[6].trailer} watchlist={trendings[6].watchlist}/>
       <div className="grid">
         <h1>Movies</h1>
-        <div className="spacer"></div> 
+        <div className="filterdiv">
+          <h5><i class="fas fa-sliders-h"></i>Filters</h5>
+          <small>Sort By:</small>
+          <h6>Title<i class="fas fa-angle-down"></i></h6>
+          <h6 onClick={filterYear}>Year<i class="fas fa-angle-down"></i></h6> 
+          <h6>Duration<i class="fas fa-angle-down"></i></h6>
+          <h6>Rating<i class="fas fa-angle-down"></i></h6> 
+          <h6>Genre<i class="fas fa-angle-down"></i></h6>  
+          <small>Search :</small>
+          <input type="text" placeholder="Search Movies..."/>
+        </div>
+        <div className="spacers"></div> 
         <div className="pagegrid">
-          {shuffle(allmovies)}
-        </div> 
+          {shuffle(themovies)}
+        </div>  
         <div className="spacer"></div>
       </div> 
     </div>   

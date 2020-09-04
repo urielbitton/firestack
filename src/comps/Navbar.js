@@ -3,7 +3,7 @@ import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
 import Search from './Search'
 import AddMovie from './AddMovie';
 
-function Navbar() {
+function Navbar(props) {
    
   useEffect(() => { 
     const menulink = document.querySelectorAll('nav .menu > a')
@@ -112,7 +112,7 @@ function Navbar() {
     </div> 
     </nav>
     <div style={{height:'65px'}}></div>
-    <Search />
+    <Search openmovie={props.openmovie}/>
     <AddMovie />
     </>
   )
