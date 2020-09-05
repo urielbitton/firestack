@@ -53,12 +53,16 @@ function Navbar(props) {
        
     }
     document.querySelector('.navsearch').addEventListener("click", openSearch)
+    const mainsearch = document.querySelector('.mainsearch')
     function openSearch() {
       document.querySelector('.searchcont').style.display = "block"
         setTimeout(() => {
           document.querySelector('.searchcont').style.opacity = "1"
           document.querySelector('.searchcont').style.transform = "scale(1)"
         }, 100);
+        setTimeout(() => {
+          mainsearch.focus()
+        }, 300);
         setTimeout(() => {
           document.body.style.overflowY = "hidden"
         }, 500);

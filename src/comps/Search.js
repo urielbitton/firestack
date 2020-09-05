@@ -2,7 +2,7 @@ import React, {useEffect, useContext} from 'react'
 import { MovieContext } from './MovieContext'
 import MovieItem from './MovieItem'
 
-function Search(props) { 
+function Search(props) {  
    
   const {populars, trendings, classics, tvs, general, superheros} = useContext(MovieContext)
 
@@ -124,11 +124,11 @@ function Search(props) {
         {rowpopulars}
         {rowclassics}
         {rowgeneral}
-        {rowtvs}
+        {rowtvs} 
         {rowsuperheros}
       </div>
     </div>
-  )
+  ) 
 }
  
 export default Search 

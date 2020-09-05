@@ -4,7 +4,7 @@ import Lightbox from './Lightbox'
 import { MovieContext } from './MovieContext'
      
 
-function Feature(props) {
+function Feature(props) { 
 
   const {populars, trendings, classics, general, tvs} = useContext(MovieContext)
 
