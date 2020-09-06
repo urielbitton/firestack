@@ -1,7 +1,6 @@
 import React, {useState, useContext, useEffect} from 'react'
 import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
 import Home from './Home'
-import Page from './Page'
 import MoviePage from './MoviePage'
 import { MovieContext } from './MovieContext'
 import Movies from './Movies'

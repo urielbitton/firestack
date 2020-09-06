@@ -1,15 +1,14 @@
 import React from 'react'
-import Page from './Page'
 
 
-function Tvs() {
+function Settings() {
 
   return (
     <>
-      <Page pagetitle="settings"/> 
+      
     </>
   )
 }
 
-export default Tvs
+export default Settings
 

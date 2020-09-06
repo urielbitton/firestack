@@ -131,6 +131,7 @@ function MovieItem(props) {
             document.querySelector('.homelink').click()
             setTimeout(() => {document.querySelector('.favoriteslink').click()}, 0);
         }
+        
     }    
      
     return (    

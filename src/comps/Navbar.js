@@ -68,6 +68,24 @@ function Navbar(props) {
         }, 500);
     }
 
+    const profile = document.querySelector('.profile')
+    const profmenu = document.querySelector('.profmenu')
+    profile.addEventListener('click', openProfile)
+    function openProfile(e) {
+      e.stopImmediatePropagation()
+      profmenu.style.display = 'block'
+      setTimeout(() => {
+        profmenu.style.opacity = '1'
+      }, 50);
+    }  
+    function closeProfile() {
+      profmenu.style.opacity = '0'
+      setTimeout(() => {
+        profmenu.style.display = 'none'
+      }, 50);
+    }
+    document.body.onclick = () => closeProfile()
+
   },[]) 
    
   function darkMode() {
@@ -106,6 +124,12 @@ function Navbar(props) {
       </div>
       <div className="profile">
         <img src="https://i.imgur.com/t9EHxct.png" alt="prof" />
+        <div className="profmenu">
+          <h6>My Account</h6>
+          <h6>Preferences</h6>
+          <h6>About Firestack</h6>
+          <h6>Settings</h6>
+        </div>
       </div>
       
       <label>

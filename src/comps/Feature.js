@@ -25,7 +25,7 @@ function Feature(props) {
   },[])   
          
   function addToWatchlist(e) { 
-    window.scrollTo(0, 0)  
+    window.scrollTo(0, 0)   
  
     trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})  
     populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
