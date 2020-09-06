@@ -6,51 +6,51 @@ import { MovieContext } from './MovieContext'
 import MoviePage from './MoviePage' 
  
     
-function Home(props) {  
+function Home(props) {   
     
   const {populars, trendings, classics, tvs, general, superheros} = useContext(MovieContext)
 
   const rowtrendings = trendings.map(movie => { 
     return (  
       <div className="box">
-        <MovieItem movie={movie} openmovie={props.openmovie} addtowatch={props.addtowatch} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink}  watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
+        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink}  watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
       </div>  
     )  
   }) 
   const rowpopulars = populars.map(movie => {  
     return (
       <div className="box">
-         <MovieItem movie={movie} openmovie={props.openmovie} addtowatch={props.addtowatch} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
+         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
       </div>
     )
   }) 
   const rowtvs = tvs.map(movie => {
     return (
       <div className="box">
-         <MovieItem movie={movie} openmovie={props.openmovie} addtowatch={props.addtowatch} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
+         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
       </div>
     ) 
   }) 
   const rowgeneral = general.map(movie => { 
     return (  
       <div className="box">
-        <MovieItem movie={movie} openmovie={props.openmovie} addtowatch={props.addtowatch} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
+        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
       </div>  
     )  
   }) 
   const rowclassics = classics.map(movie => {
     return (
       <div className="box">
-          <MovieItem movie={movie} openmovie={props.openmovie} addtowatch={props.addtowatch} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
+          <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
       </div>
-    ) 
+    )  
   }) 
   const rowsuperheros = superheros.map(movie => {
     return (
       <div className="box">
-         <MovieItem movie={movie} openmovie={props.openmovie} addtowatch={props.addtowatch} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
+         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate.toFixed(1)} key={movie.id} />
       </div>
-    ) 
+    )  
 })    
 
   useEffect(() => {
@@ -66,7 +66,7 @@ function Home(props) {
   const randnum = Math.floor(Math.random() * 9) + 0; 
  
   return ( 
-    <div className="home">  
+    <div className="home">   
 
         <Feature movie={trendings[randnum]} title={trendings[randnum].title} cover={trendings[randnum].cover} rating={trendings[randnum].rating} descript={trendings[randnum].descript} genre={trendings[randnum].genre} year={trendings[randnum].year} trailer={trendings[randnum].trailer} watchlist={trendings[randnum].watchlist} rate={trendings[randnum].rate}/>
         <div className="grid">

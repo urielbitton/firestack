@@ -1,13 +1,13 @@
 import React, {useContext, useEffect, useState} from 'react'
-import { BrowserRouter as Router,Switch,Route,Link } from "react-router-dom";
 import Lightbox from './Lightbox'
 import { MovieContext } from './MovieContext'
      
 
-function Feature(props) { 
+function Feature(props) {  
 
   const {populars, trendings, classics, general, tvs} = useContext(MovieContext)
-
+  const notifcont = document.createElement('DIV')
+  notifcont.classList.add('notifcont')
   useEffect(() => {
     const lightboxcont = document.querySelector('.lightboxcont')
     const lightbox = document.querySelector('.lightbox')
@@ -22,17 +22,74 @@ function Feature(props) {
       }, 100);
     }  
     
-  },[])  
-        
-  function addToWatchlist() { 
+  },[])   
+         
+  function addToWatchlist(e) { 
     window.scrollTo(0, 0)  
-
+ 
     trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})  
     populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
     classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
     general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})     
-    tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})       
-  } 
+    tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})   
+    
+    notifcont.remove()
+    notifcont.innerHTML = `<i class='fas fa-circle-notch'></i><p>${props.title} has been added to your watchlist.</p><i className='close'></i>`
+    document.body.appendChild(notifcont)
+    notifcont.style.display = "block"  
+    setTimeout(() => {
+        notifcont.style.cssText += "opacity:1;transform:scale(1);bottom:20px"         
+    }, 100)
+    setTimeout(() => {
+        notifcont.style.cssText += "opacity:0;transform:scale(0.9);bottom:5px" 
+        setTimeout(() => {
+            notifcont.style.display = "block" 
+            notifcont.remove()           
+        }, 100) 
+    }, 5000)
+    notifcont.onclick = () => {
+        document.querySelector('.watchlistlink').click()
+    } 
+    e.target.querySelector('i').classList.remove("fas", "fa-plus")
+    e.target.querySelector('i').classList.add("fas", "fa-check") 
+    if(window.location.pathname === "/Watchlist") {
+      document.querySelector('.homelink').click()
+      setTimeout(() => {document.querySelector('.watchlistlink').click()}, 1);
+    }
+  }  
+  function removeFromWatchlist(e) {  
+    window.scrollTo(0, 0)  
+    trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""})  
+    populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""}) 
+    classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""}) 
+    general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""})     
+    tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""})       
+
+    notifcont.remove()
+    notifcont.innerHTML = `<i class='fas fa-circle-notch'></i><p>${props.title} has been removed from your watchlist.</p><i className='close'></i>`
+    document.body.appendChild(notifcont)
+    notifcont.style.display = "block"  
+    setTimeout(() => {
+        notifcont.style.cssText += "opacity:1;transform:scale(1);bottom:20px"         
+    }, 100)
+    setTimeout(() => {
+        notifcont.style.cssText += "opacity:0;transform:scale(0.9);bottom:5px" 
+        setTimeout(() => {
+            notifcont.style.display = "block" 
+            notifcont.remove()           
+        }, 100) 
+    }, 5000)
+    notifcont.onclick = () => {
+        document.querySelector('.watchlistlink').click()
+    } 
+    e.target.querySelector('i').classList.remove("fas", "fa-check")
+    e.target.querySelector('i').classList.add("fas", "fa-plus")
+    if(window.location.pathname === "/Watchlist") {
+      document.querySelector('.homelink').click()
+      setTimeout(() => {document.querySelector('.watchlistlink').click()}, 1);
+    }
+  }   
+ 
 
   return ( 
     <>  
@@ -61,10 +118,10 @@ function Feature(props) {
           { props.starring?(props.starring[0]):"" }, { props.starring?(props.starring[1]):"" }, { props.starring?(props.starring[2]):"" }
         </p>   
         <button className="watchnowbtn"><i className="far fa-play-circle"></i>Watch Now</button>
-        <Link to="/Watchlist"><button className="watchlist" onClick={addToWatchlist}><i className={props.watchlist?"fas fa-check":"fas fa-plus"}></i>{props.watchlist?"Added To Watchlist":"Add To Watchlist"}</button></Link>
+        <button className="watchlist" onClick={props.watchlist?removeFromWatchlist:addToWatchlist}><i className={props.watchlist?"fas fa-check":"fas fa-plus"}></i>{props.watchlist?"Added To Watchlist":"Add To Watchlist"}</button>
       </div>    
-    </div>  
-    <div className="spacer"></div> 
+    </div>   
+    <div className="spacer"></div>  
  
     <Lightbox trailer={props.trailer}/> 
   

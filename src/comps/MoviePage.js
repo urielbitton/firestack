@@ -4,14 +4,13 @@ import { MovieContext } from './MovieContext'
 
 function MoviePage(props) {  
 
-  const {populars, trendings, classics} = useContext(MovieContext)
   const randnum = Math.round(Math.random() * 10000) + 1
 
   useEffect(() => {
     const slider = document.querySelectorAll('.imageslider');
     let isDown = false;
     let startX;
-    let scrollLeft; 
+    let scrollLeft;   
 
     for(let item of slider) {
         item.addEventListener('mousedown', (e) => {
@@ -36,11 +35,11 @@ function MoviePage(props) {
             item.scrollLeft = scrollLeft - walk;
         });  
     } 
-  },[]) 
-
-  return ( 
-    <div className="moviepage" re-route="moviepage">
-      <Feature title={props.title} year={props.year} cover={props.cover} rating={props.rating} genre={props.genre} descript={props.descript} starring={props.starring} director={props.director} trailer={props.trailer}/>
+  },[])   
+   
+  return (  
+    <div className="moviepage">
+      <Feature title={props.title} year={props.year} cover={props.cover} rating={props.rating} genre={props.genre} descript={props.descript} starring={props.starring} director={props.director} trailer={props.trailer} watchlist={props.watchlist}/>
       <div className="grid"> 
         <div className="onemoviegrid">
           <div className="oneimage">
@@ -48,9 +47,9 @@ function MoviePage(props) {
             <small>IMDB: <a href={props.imdblink} target="_target" rel="noopener noreferrer">{props.title}</a></small>
             <small>Views: {randnum}</small>
           </div> 
-          <div className="onemovieinfo">
+          <div className="onemovieinfo">  
             <h5>Synopsis<hr/></h5>
-            <p>{props.descript}</p>
+            <p>{props.descript}</p>  
             <h5>Starring<hr/></h5>
             { 
               Array.isArray(props.starring)?

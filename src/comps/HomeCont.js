@@ -19,7 +19,7 @@ function HomeCont() {
   const [title, setTitle] = useState("")
   const [year, setYear] = useState(1900)
   const [image, setImage] = useState("")
-  const [cover, setCover] = useState("")
+  const [cover, setCover] = useState("") 
   const [descript, setDescript] = useState("")
   const [rating, setRating] = useState(0)
   const [genre, setGenre] = useState("") 
@@ -30,9 +30,9 @@ function HomeCont() {
   const [pictures, setPictures] = useState(["","",""])
   const [imdblink, setImdblink] = useState("")
   const [watchlist, setWatchlist] = useState(false)
-
+ 
   //set movie page func 
-  function openMovie(title, year, image, cover, descript, rating, genre, runtime, starring, director, trailer, pictures, imdblink) {
+  function openMovie(title, year, image, cover, descript, rating, genre, runtime, starring, director, trailer, pictures, imdblink, watchlist) {
     setTitle(title)
     setYear(year)
     setImage(image)
@@ -46,7 +46,7 @@ function HomeCont() {
     setTrailer(trailer)
     setPictures(pictures)
     setImdblink(imdblink)
-
+    setWatchlist(watchlist)
     window.scrollTo(0, 0)
   }
  
@@ -54,7 +54,7 @@ function HomeCont() {
   return (  
     <div className="homecont">  
       <Navbar openmovie={openMovie}/>
-      <MenuSlide />
+      <MenuSlide /> 
       <Switch>
         <Route exact path="/">
           <Home openmovie={openMovie} trailer={trailer} />
@@ -74,11 +74,11 @@ function HomeCont() {
         <Route path="/Settings">
           <Settings />
         </Route> 
-        <Route path="/MovieItem">
-          <MoviePage title={title} year={year} image={image} cover={cover} descript={descript} rating={rating} genre={genre} runtime={runtime} starring={starring} director={director} pictures={pictures} trailer={trailer} imdblink={imdblink} />
-        </Route>
+        <Route path="/MoviePage">
+          <MoviePage title={title} year={year} image={image} cover={cover} descript={descript} rating={rating} genre={genre} runtime={runtime} starring={starring} director={director} pictures={pictures} trailer={trailer} imdblink={imdblink} watchlist={watchlist} />
+        </Route> 
       </Switch>
-
+  
 
     </div> 
   )  
