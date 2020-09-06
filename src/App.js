@@ -7,13 +7,13 @@ import MovieContextProvider from "./comps/MovieContext";
 function App() { 
    
   return (  
-      <> 
+      <div> 
       <Router>
         <MovieContextProvider>   
-          <HomeCont />  
+          <HomeCont />    
         </MovieContextProvider>
       </Router>  
-      </>  
+      </div>  
     ) 
 
 }  

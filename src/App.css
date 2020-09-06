@@ -450,8 +450,8 @@ nav .profile img {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 .pagegrid .box {
-  margin: 40px auto;
-}
+  margin: 40px 0;
+} 
 .box .fa-clock:hover, .box .fa-imdb:hover { 
   color: #fff;
 }
@@ -737,7 +737,7 @@ nav .profile img {
 
 .notifcont {
   position: fixed;
-  bottom: 20px;
+  bottom: 5px;
   left: 20px;
   transition: all 0.3s;
   opacity: 0;
@@ -750,6 +750,7 @@ nav .profile img {
   box-shadow: 0 1px 20px rgba(0,0,0,0.5);
   color: #eee;
   z-index: 999;
+  cursor: pointer;
 }
 .notifcont p {
   font-size: 14px;
@@ -1087,7 +1088,24 @@ nav .profile img {
     margin-left: 0;
   }
 }
+@media (max-width: 550px) {
+  .feature .featdescript {
+    width: 90%;
+  }
+}
+@media (max-width: 450px) {
+  nav .addmoviebtn {
+    margin-right: 20px;
+  }
+  nav .navsearch {
+    width: 120px;
+  }
+  nav .navsearch:focus {
+    width: 120px;
+  }
 
+}
+/*Max Heights */
 @media (max-height: 850px) {
   .addmovie {
     height: 80vh;

@@ -98,11 +98,11 @@ function Navbar(props) {
       <i className="fas fa-bars sidebtn"></i>
 
       <div className="menu">
-        <Link to="/"><h6 className="activemenu"><i className="fas fa-home"></i>Home<hr/></h6></Link>
+        <Link to="/" className="homelink"><h6 className="activemenu"><i className="fas fa-home"></i>Home<hr/></h6></Link>
         <Link to="/Movies"><h6><i className="fas fa-film"></i>Movies<hr/></h6></Link>
         <Link to="/Tvs"><h6><i className="fas fa-tv"></i>TV Shows<hr/></h6></Link>
-        <Link to="/Favorites"><h6><i className="fas fa-heart"></i>Favorites<hr/></h6></Link>
-        <Link to="/Watchlist"><h6><i className="fas fa-list"></i>Watchlist<hr/></h6></Link>
+        <Link to="/Favorites" className="favoriteslink"><h6><i className="fas fa-heart"></i>Favorites<hr/></h6></Link>
+        <Link to="/Watchlist" className="watchlistlink"><h6><i className="fas fa-list"></i>Watchlist<hr/></h6></Link>
       </div>
       <div className="profile">
         <img src="https://i.imgur.com/t9EHxct.png" alt="prof" />

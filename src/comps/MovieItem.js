@@ -9,32 +9,64 @@ function MovieItem(props) {
     const notifcont = document.createElement('DIV')
     notifcont.classList.add('notifcont')
 
-    function watchListFuncs() {
+    function watchListFuncs(e) {
         trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})  
         populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
         classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
         general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})     
         tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""})
         superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = true):""}) 
-        //drop notifications
+        //drop notifications 
         notifcont.remove()
-        notifcont.innerHTML = "<i class='fas fa-circle-notch'></i><p>"+movietitle+" has been added to your watchlist.</p><i className='close'></i>"
+        notifcont.innerHTML = `<i class='fas fa-circle-notch'></i><p>${movietitle} has been added to your watchlist.</p><i className='close'></i>`
         document.body.appendChild(notifcont)
-        notifcont.style.display = "block" 
+        notifcont.style.display = "block"  
         setTimeout(() => {
-            notifcont.style.opacity = "1"
-            notifcont.style.transform = "scale(1)"         
+            notifcont.style.cssText += "opacity:1;transform:scale(1);bottom:20px"         
         }, 100)
         setTimeout(() => {
-            notifcont.style.opacity = ""
-            notifcont.style.transform = "" 
+            notifcont.style.cssText += "opacity:0;transform:scale(0.9);bottom:5px" 
             setTimeout(() => {
-                notifcont.style.display = "block"
+                notifcont.style.display = "block" 
                 notifcont.remove()           
             }, 100) 
         }, 5000); 
+        notifcont.onclick = () => {
+            document.querySelector('.watchlistlink').click()
+        } 
+        e.target.classList.remove("fas", "fa-plus")
+        e.target.classList.add("fas", "fa-check") 
+        
     }    
-    function favoritesFuncs() { 
+    function removeWatchlist(e) {
+        trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""})  
+        populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""}) 
+        classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""}) 
+        general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""})     
+        tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""})
+        superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.watchlist = false):""}) 
+        //drop notifications 
+        notifcont.remove()
+        notifcont.innerHTML = `<i class='fas fa-circle-notch'></i><p>${movietitle} has been removed from your watchlist.</p><i className='close'></i>`
+        document.body.appendChild(notifcont)
+        notifcont.style.display = "block"  
+        setTimeout(() => {
+            notifcont.style.cssText += "opacity:1;transform:scale(1);bottom:20px"            
+        }, 100) 
+        setTimeout(() => {
+            notifcont.style.cssText += "opacity:0;transform:scale(0.9);bottom:5px"    
+            setTimeout(() => {
+                notifcont.style.display = "block" 
+                notifcont.remove()           
+            }, 100)  
+        }, 5000);
+        notifcont.onclick = () => {
+            document.querySelector('.watchlistlink').click()
+        }   
+        e.target.classList.remove("fas", "fa-check") 
+        e.target.classList.add("fas", "fa-plus")
+    }  
+    function favoritesFuncs(e) { 
         trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
         populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
         classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""}) 
@@ -43,23 +75,54 @@ function MovieItem(props) {
         superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = true):""})          
         //drop notifications
         notifcont.remove()
-        notifcont.innerHTML = "<i class='fas fa-circle-notch'></i><p>"+movietitle+" has been added to favorites.</p><i className='close'></i>"
+        notifcont.innerHTML = `<i class='fas fa-circle-notch'></i><p>${movietitle} has been added to favorites.</p><i className='close'></i>`
         document.body.appendChild(notifcont)
         notifcont.style.display = "block"
         setTimeout(() => {
-            notifcont.style.opacity = "1"
-            notifcont.style.transform = "scale(1)"         
+            notifcont.style.cssText += "opacity:1;transform:scale(1);bottom:20px"           
         }, 100)
         setTimeout(() => {
-            notifcont.style.opacity = ""
-            notifcont.style.transform = "" 
+            notifcont.style.cssText += "opacity:0;transform:scale(0.9);bottom:5px" 
             setTimeout(() => {
                 notifcont.style.display = "block"
                 notifcont.remove()           
-            }, 100)  
+            }, 100)   
         }, 5000);
+        notifcont.onclick = () => {
+            document.querySelector('.favoriteslink').click()
+        }
+        e.target.classList.remove("far")
+        e.target.classList.add("fas")
     }  
-   
+    function removeFavorites(e) { 
+        trendings.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = false):""}) 
+        populars.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = false):""}) 
+        classics.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = false):""}) 
+        general.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = false):""}) 
+        tvs.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = false):""}) 
+        superheros.map((movie) => { return(movie.id === props.movie.id)?(props.movie.favorite = false):""})          
+        //drop notifications
+        notifcont.remove()
+        notifcont.innerHTML = `<i class='fas fa-circle-notch'></i><p>${movietitle} has been removed from your favorites.</p><i className='close'></i>`
+        document.body.appendChild(notifcont)
+        notifcont.style.display = "block"
+        setTimeout(() => {
+            notifcont.style.cssText += "opacity:1;transform:scale(1);bottom:20px"         
+        }, 100)
+        setTimeout(() => {
+            notifcont.style.cssText += "opacity:0;transform:scale(0.9);bottom:5px" 
+            setTimeout(() => {
+                notifcont.style.display = "block"
+                notifcont.remove()           
+            }, 100)   
+        }, 5000);
+        notifcont.onclick = () => {
+            document.querySelector('.favoriteslink').click()
+        }
+        e.target.classList.remove("fas")
+        e.target.classList.add("far")
+    }  
+    
     return (    
         <div className="item"> 
             <img src={props.image} alt="movie"/>
@@ -69,9 +132,9 @@ function MovieItem(props) {
                     <h4>{props.title}</h4>
                     <h5>{props.year}</h5>   
                     <i className={props.watchlist?"fas fa-check":"fas fa-plus"}
-                    onClick={!props.watchlist?watchListFuncs:""}></i> 
+                    onClick={!props.watchlist?watchListFuncs:removeWatchlist}></i> 
                     <i className={props.favorite?"fas fa-heart":"far fa-heart"} 
-                    onClick={!props.favorite?favoritesFuncs:""}></i>
+                    onClick={!props.favorite?favoritesFuncs:removeFavorites}></i>
                     <small><i className="fas fa-clock"></i><span>{props.runtime}</span></small>  
                     <small><i class="fab fa-imdb"></i><span>{props.rate}</span></small>
                 </div>   
