@@ -105,7 +105,7 @@ function Movies(props) {
      
   return (   
     <div className="page">
-      <Feature movie={trendings[6]} title={trendings[6].title} cover={trendings[6].cover} rating={trendings[6].rating} genre={trendings[6].genre} year={trendings[6].year} descript={trendings[6].descript} trailer={trendings[6].trailer} watchlist={trendings[6].watchlist}/>
+      <Feature movie={trendings[6]} title={trendings[6].title} cover={trendings[6].cover} rating={trendings[6].rating} genre={trendings[6].genre} year={trendings[6].year} descript={trendings[6].descript} trailer={trendings[6].trailer} watchlist={trendings[6].watchlist} stars={trendings[6].stars}/>
       <div className="grid">
         <h1>Movies</h1>
         <div className="filterdiv">

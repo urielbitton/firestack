@@ -13,45 +13,45 @@ function Home(props) {
   const rowtrendings = trendings.map(movie => { 
     return (  
       <div className="box">
-        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink}  watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} key={movie.id} />
+        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink}  watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} stars={movie.stars} key={movie.id} />
       </div>  
     )  
   }) 
   const rowpopulars = populars.map(movie => {  
     return (
       <div className="box">
-         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} key={movie.id} />
+         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} stars={movie.stars} key={movie.id} />
       </div>
     )
   }) 
   const rowtvs = tvs.map(movie => {
     return (
       <div className="box">
-         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} key={movie.id} />
+         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} stars={movie.stars} key={movie.id} />
       </div>
     ) 
   }) 
   const rowgeneral = general.map(movie => { 
     return (  
       <div className="box">
-        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} key={movie.id} />
-      </div>  
+        <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} stars={movie.stars} key={movie.id} />
+      </div>   
     )  
   }) 
   const rowclassics = classics.map(movie => {
     return (
       <div className="box">
-          <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} key={movie.id} />
+          <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} stars={movie.stars} key={movie.id} />
       </div>
     )  
   }) 
   const rowsuperheros = superheros.map(movie => {
     return (
       <div className="box">
-         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} key={movie.id} />
+         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} watchlist={movie.watchlist} favorite={movie.favorite} rate={movie.rate?movie.rate.toFixed(1):""} stars={movie.stars} key={movie.id} />
       </div>
     )  
-})    
+})     
 
   useEffect(() => {
     const rows = document.querySelectorAll('.innerrow') 
@@ -68,7 +68,7 @@ function Home(props) {
   return ( 
     <div className="home">   
 
-        <Feature movie={trendings[randnum]} title={trendings[randnum].title} cover={trendings[randnum].cover} rating={trendings[randnum].rating} descript={trendings[randnum].descript} genre={trendings[randnum].genre} year={trendings[randnum].year} trailer={trendings[randnum].trailer} watchlist={trendings[randnum].watchlist} rate={trendings[randnum].rate}/>
+        <Feature movie={trendings[randnum]} title={trendings[randnum].title} cover={trendings[randnum].cover} rating={trendings[randnum].rating} descript={trendings[randnum].descript} genre={trendings[randnum].genre} year={trendings[randnum].year} trailer={trendings[randnum].trailer} watchlist={trendings[randnum].watchlist} rate={trendings[randnum].rate} stars={trendings[randnum].stars}/>
         <div className="grid">
  
         <MovieRow films={rowtrendings} rowtitle="Trending Movies" />

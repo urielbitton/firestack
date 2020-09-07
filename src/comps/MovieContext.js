@@ -23,6 +23,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 6.6,
+    stars: 3,
 },
 {
     id: 2, 
@@ -42,6 +43,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 8.0,
+    stars: 4,
 },
 {  
     id: 9,
@@ -61,6 +63,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 8.6,
+    stars: 5,
 },
 {
     id: 3,
@@ -80,6 +83,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 8.5,
+    stars: 4,
 },
 {
     id: 4,
@@ -99,6 +103,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 9.0,
+    stars: 5,
 },
 {
     id: 5, 
@@ -118,6 +123,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 6.9,
+    stars: 3,
 },
 {
     id: 6,
@@ -137,6 +143,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 7.0,
+    stars: 3,
 },
 { 
     id: 7,
@@ -156,6 +163,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 4.1,
+    stars: 2,
 }, 
 { 
     id: 8,
@@ -175,6 +183,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 6.9,
+    stars: 3,
 }, 
 {  
     id: 10,
@@ -194,6 +203,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 8.4,
+    stars: 5,
 },  
 ])  
   const [populars, setPopulars] = useState([
@@ -215,6 +225,7 @@ const [trendings, setTrendings] = useState([
       watchlist: false,
       favorite: false,
       rate: 8.4,
+      stars: 5,
   }, 
   {
       id: 2, 
@@ -234,6 +245,7 @@ const [trendings, setTrendings] = useState([
       watchlist: false,
       favorite: false,
       rate: 6.6,
+      stars: 3,
   },
   {
     id: 8,
@@ -253,6 +265,7 @@ const [trendings, setTrendings] = useState([
     watchlist: false,
     favorite: false,
     rate: 8.8,
+    stars: 5,
   },  
   {
       id: 3,
@@ -272,6 +285,7 @@ const [trendings, setTrendings] = useState([
       watchlist: false,
       favorite: false,
       rate: 7.3,
+      stars: 4,
   },
   {
       id: 4,
@@ -291,6 +305,7 @@ const [trendings, setTrendings] = useState([
       watchlist: false,
       favorite: false,
       rate: 6.9,
+      stars: 3,
   },
   {
       id: 5,
@@ -310,6 +325,7 @@ const [trendings, setTrendings] = useState([
       watchlist: false,
       favorite: false,
       rate: 7.4,
+      stars: 4,
   },
   {
       id: 6,
@@ -329,6 +345,7 @@ const [trendings, setTrendings] = useState([
       watchlist: false,
       favorite: false,
       rate: 7.9,
+      stars: 4,
   },
   {
       id: 7,
@@ -348,6 +365,7 @@ const [trendings, setTrendings] = useState([
       watchlist: false,
       favorite: false,
       rate: 6.2,
+      stars: 3,
   }, 
   ])  
   const [general, setGeneral] = useState([
@@ -364,6 +382,7 @@ const [trendings, setTrendings] = useState([
       runtime: "1:46",
       trailer: "gCcx85zbxz4",
       rate: 8.0,
+      stars: 4,
     },
     { 
         id: 2,
@@ -378,6 +397,7 @@ const [trendings, setTrendings] = useState([
         runtime: "1:56",
         trailer: "xi-1NchUqMA",
         rate: 7.9,
+        stars: 4,
     },
   ])
   const [classics, setClassics] = useState([
@@ -390,6 +410,7 @@ const [trendings, setTrendings] = useState([
         genre: "Drama, Superhero, Thriller",
         runtime: "2:20",
         rate: 9.0,
+        stars: 5,
     },  
     {
         id: 2,
@@ -400,6 +421,7 @@ const [trendings, setTrendings] = useState([
         genre: "Psychological Thriller",
         runtime: "2:00",
         rate: 8.2,
+        stars: 5,
     },
     { 
         id: 3, 
@@ -410,6 +432,7 @@ const [trendings, setTrendings] = useState([
         genre: "Psychological Thriller",
         runtime: "1:45",
         rate: 8.7,
+        stars: 5,
     },
     {
         id: 4,
@@ -420,6 +443,7 @@ const [trendings, setTrendings] = useState([
         genre: "Action, Adventure",
         runtime: "1:40",
         rate: 7.8,
+        stars: 4,
     },
     {
         id: 5,
@@ -430,6 +454,7 @@ const [trendings, setTrendings] = useState([
         genre: "Drama, Superhero, Thriller",
         runtime: "2:30",
         rate: 8.4,
+        stars: 5,
     }, 
     { 
         id: 6,
@@ -440,6 +465,7 @@ const [trendings, setTrendings] = useState([
         genre: "Action, Superhero",
         runtime: "1:46",
         rate: 7.3,
+        stars: 4,
     },
     {
         id: 7,
@@ -450,6 +476,7 @@ const [trendings, setTrendings] = useState([
         genre: "Sci-fi, Adventure",
         runtime: "1:40",
         rate: 8.5,
+        stars: 5,
     },
     {
         id: 8, 
@@ -460,6 +487,7 @@ const [trendings, setTrendings] = useState([
         genre: "Adventure",
         runtime: "2:40",
         rate: 8.0,
+        stars: 5,
     },
     {
         id: 9,
@@ -470,6 +498,7 @@ const [trendings, setTrendings] = useState([
         genre: "Adventure",
         runtime: "2:11",
         rate: 7.0,
+        stars: 4,
     },
     {
         id: 10,
@@ -480,6 +509,7 @@ const [trendings, setTrendings] = useState([
         genre: "Adventure, War",
         runtime: "1:40",
         rate: 7.2,
+        stars: 4,
     },
   ])
 
@@ -496,6 +526,7 @@ const [trendings, setTrendings] = useState([
       trailer: "78zEDBmHwbU",
       tvshow: true,
       rate: 8.3,
+      stars: 4,
   },
   {
       id: 2,
@@ -509,6 +540,7 @@ const [trendings, setTrendings] = useState([
       trailer: "HhesaQXLuRY",
       tvshow: true,
       rate: 9.5,
+      stars: 5,
   },
   { 
     id: 3,
@@ -522,6 +554,7 @@ const [trendings, setTrendings] = useState([
     trailer: "qlcWFoNqZHc",
     tvshow: true,
     rate: 9.1,
+    stars: 5,
 }
   ])
 
@@ -538,8 +571,9 @@ const [trendings, setTrendings] = useState([
       runtime: "2:06",
       trailer: "tmeOjFno6Do",
       rate: 6.6,
+      stars: 3,
   } 
-  ])  
+  ])   
  
   
   return (
@@ -547,6 +581,6 @@ const [trendings, setTrendings] = useState([
       {props.children}
     </MovieContext.Provider>
   )
-}
+} 
 
 export default MovieContextProvider 

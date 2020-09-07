@@ -98,14 +98,37 @@ function Navbar(props) {
     if(document.body.contains(document.querySelector('.moviepage'))) {
       document.querySelector('.moviepage').onclick = () => closeProfMenu()
     }
+    if(document.body.contains(document.querySelector('.accountpage'))) {
+      document.querySelector('.accountpage').onclick = () => closeProfMenu()
+    }
     function closeProfMenu() {
       profmenu.style.opacity = '0'
         setTimeout(() => {
           profmenu.style.display = 'none'
         }, 50); 
-        profclick = false
+        profclick = false 
     }
-    
+    document.querySelector('.atab1').onclick = () => {
+      setTimeout(() => {
+        document.querySelector('[re-taber="account"]').click()
+      }, 50);
+    }  
+    document.querySelector('.atab2').onclick = () => {
+      setTimeout(() => {
+        document.querySelector('[re-taber="preferences"]').click()
+      }, 50);
+    } 
+    document.querySelector('.atab3').onclick = () => {
+      setTimeout(() => {
+        document.querySelector('[re-taber="about"]').click()
+      }, 50);
+    }
+    document.querySelector('.atab4').onclick = () => {
+      setTimeout(() => {
+        document.querySelector('[re-taber="connects"]').click()
+      }, 50);
+    }
+ 
   },[]) 
    
   function darkMode() {
@@ -142,6 +165,7 @@ function Navbar(props) {
     }
     
   }
+
   
   return (
     <>
@@ -160,10 +184,10 @@ function Navbar(props) {
         <img src="https://i.imgur.com/t9EHxct.png" alt="prof" />
         <i className="fas fa-angle-down"></i>
         <div className="profmenu">
-          <Link to="/MyAccount"><h6><i class="far fa-user"></i>Account</h6></Link>
-          <Link to="/MyAccount"><h6><i class="fas fa-sliders-h"></i>Preferences</h6></Link>
-          <Link to="/MyAccount"><h6><i class="far fa-question-circle"></i>About Firestack</h6></Link>
-          <Link to="/MyAccount"><h6><i class="fas fa-plug"></i>Connects</h6></Link>
+          <Link to="/MyAccount"><h6 className="atab1"><i class="far fa-user"></i>Account</h6></Link>
+          <Link to="/MyAccount"><h6 className="atab2"><i class="fas fa-sliders-h"></i>Preferences</h6></Link>
+          <Link to="/MyAccount"><h6 className="atab3"><i class="far fa-question-circle"></i>About Firestack</h6></Link>
+          <Link to="/MyAccount"><h6 className="atab4"><i class="fas fa-plug"></i>Connects</h6></Link>
         </div>
       </div>   
        

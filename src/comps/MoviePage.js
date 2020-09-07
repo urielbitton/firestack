@@ -39,7 +39,7 @@ function MoviePage(props) {
    
   return (  
     <div className="moviepage">
-      <Feature title={props.title} year={props.year} cover={props.cover} rating={props.rating} genre={props.genre} descript={props.descript} starring={props.starring} director={props.director} trailer={props.trailer} watchlist={props.watchlist}/>
+      <Feature title={props.title} year={props.year} cover={props.cover} rating={props.rating} genre={props.genre} descript={props.descript} starring={props.starring} director={props.director} trailer={props.trailer} watchlist={props.watchlist} stars={props.stars}/>
       <div className="grid"> 
         <div className="onemoviegrid">
           <div className="oneimage">

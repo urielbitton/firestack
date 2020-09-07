@@ -124,11 +124,12 @@ function MyAccount() {
                     <small>Notify New Releases</small>
                       <input type="checkbox"/><i></i>
                   </label>
-                </div>
+                </div> 
+                <button onClick={dropNotif}>Save</button>
             </div>
             <div re-tab="about">
               <h4>About Firestack</h4>
-              <h6>A Movie entertainment App - Made with React JS</h6>
+              <h6><i class="fas fa-video"></i>A Movie entertainment App - Made with React JS</h6>
               <img className="aboutlogo" src="https://img.icons8.com/cute-clipart/64/000000/video-message.png" alt="logo"/>
               <p>Firestack is a passionate project developed and designed by Software Developer Uriel Bitton. Firestack allows users
                 to browse the latest and trending movies, add titles to your watchlist to watch them later, save titles to your favorites and create new titles
@@ -137,12 +138,19 @@ function MyAccount() {
                 <br/><br/>So stay tuned by email and enjoy Firestack until then!
                 <br/><br/>
                 <small style={{fontWeight:'600'}}>Developer/Creator: Uriel Bitton (Helix Designs)</small>
+                <div className="clear"></div>
+               <h6><i class="fas fa-headset"></i>Support</h6> 
+               <a href="https://firestack.com" target="_blank" rel="noopener noreferrer">Get support here</a>
+               <h6><i class="fab fa-github"></i>Github</h6>
+               <p>Want to submit a pull request for a new feature? You can do so easily through our github project</p><br/>
+               <a href="https://github.com/urielbitton/firestack" target="_blank" rel="noopener noreferrer">Firestack Repository</a>
               </p>
-            </div>
+            </div> 
             <div re-tab="connects">
               <h4>Connects</h4> 
               <h6><i class="fab fa-facebook"></i>Facebook</h6>
-              <h6><i class="fas fa-play-circle"></i>Netflix</h6>
+              <h6><i class="fab fa-twitter"></i>Twitter</h6>
+              <h6><i class="fab fa-github"></i>Github</h6>
 
               <h6>More Connects Features coming soon...</h6>
             </div>

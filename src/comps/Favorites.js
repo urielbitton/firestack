@@ -45,7 +45,7 @@ function Favorites(props) {
       return  
   })
   const rowtvs = tvs.map(movie => { 
-    if(movie.favorite) 
+    if(movie.favorite)  
     return (  
       <div className="box">
         <MovieItem movie={movie} openmovie={props.openmovie} title={movie.title} year={movie.year} image={movie.image} cover={movie.cover} descript={movie.descript} rating={movie.rating} genre={movie.genre} runtime={movie.runtime} starring={movie.starring} director={movie.director} trailer={movie.trailer} pictures={movie.pictures} imdblink={movie.imdblink} rate={movie.rate.toFixed(1)} watchlist={movie.watchlist} favorite={movie.favorite} key={movie.id} />
@@ -56,11 +56,11 @@ function Favorites(props) {
     
   return (   
     <div className="page favoritespage">
-      <Feature movie={populars[4]} title={populars[4].title} cover={populars[4].cover} rating={populars[4].rating} genre={populars[4].genre} year={populars[4].year} descript={populars[4].descript} trailer={populars[4].trailer} watchlist={populars[4].watchlist}/>
+      <Feature movie={populars[5]} title={populars[5].title} cover={populars[5].cover} rating={populars[5].rating} genre={populars[5].genre} year={populars[5].year} descript={populars[5].descript} trailer={populars[5].trailer} watchlist={populars[5].watchlist} stars={populars[5].stars}/>
       <div className="grid">
         <h1>Favorites</h1>
         <div className="spacer"></div>
-        {rowtrendings}
+        {rowtrendings} 
         {rowpopulars}
         {rowclassics}
         {rowgeneral}

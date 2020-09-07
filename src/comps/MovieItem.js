@@ -134,11 +134,11 @@ function MovieItem(props) {
         
     }    
      
-    return (    
+    return (     
         <div className="item"> 
             <img src={props.image} alt="movie"/>
             <div className="boxcover"> 
-            <Link to="/MoviePage"><i className="far fa-play-circle playbtn" onClick={() => props.openmovie(props.title, props.year, props.image, props.cover, props.descript, props.rating, props.genre, props.runtime, props.starring, props.director, props.trailer, props.pictures, props.imdblink, props.watchlist)}></i></Link>
+            <Link to="/MoviePage"><i className="far fa-play-circle playbtn" onClick={() => props.openmovie(props.title, props.year, props.image, props.cover, props.descript, props.rating, props.genre, props.runtime, props.starring, props.director, props.trailer, props.pictures, props.imdblink, props.watchlist, props.stars)}></i></Link>
                 <div className="boxinfo">
                     <h4>{props.title}</h4>
                     <h5>{props.year}</h5>   

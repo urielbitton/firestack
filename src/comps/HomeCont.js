@@ -29,9 +29,10 @@ function HomeCont() {
   const [pictures, setPictures] = useState(["","",""])
   const [imdblink, setImdblink] = useState("")
   const [watchlist, setWatchlist] = useState(false)
+  const [stars, setStars] = useState(0)
  
   //set movie page func 
-  function openMovie(title, year, image, cover, descript, rating, genre, runtime, starring, director, trailer, pictures, imdblink, watchlist) {
+  function openMovie(title, year, image, cover, descript, rating, genre, runtime, starring, director, trailer, pictures, imdblink, watchlist, stars) {
     setTitle(title)
     setYear(year)
     setImage(image)
@@ -46,6 +47,7 @@ function HomeCont() {
     setPictures(pictures)
     setImdblink(imdblink)
     setWatchlist(watchlist)
+    setStars(stars)
     window.scrollTo(0, 0)
   }
  
@@ -74,7 +76,7 @@ function HomeCont() {
           <Settings />
         </Route> 
         <Route path="/MoviePage">
-          <MoviePage title={title} year={year} image={image} cover={cover} descript={descript} rating={rating} genre={genre} runtime={runtime} starring={starring} director={director} pictures={pictures} trailer={trailer} imdblink={imdblink} watchlist={watchlist} />
+          <MoviePage title={title} year={year} image={image} cover={cover} descript={descript} rating={rating} genre={genre} runtime={runtime} starring={starring} director={director} pictures={pictures} trailer={trailer} imdblink={imdblink} watchlist={watchlist} stars={stars} />
         </Route> 
         <Route path="/MyAccount">
           <MyAccount />

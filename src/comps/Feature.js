@@ -21,9 +21,8 @@ function Feature(props) {
         lightbox.style.transform = "scale(1)"
       }, 100);
     }  
-    
-  },[])   
-         
+      
+  },[])     
   function addToWatchlist(e) { 
     window.scrollTo(0, 0)   
  
@@ -89,7 +88,7 @@ function Feature(props) {
       setTimeout(() => {document.querySelector('.watchlistlink').click()}, 1);
     }
   }   
- 
+
 
   return ( 
     <>  
@@ -101,11 +100,16 @@ function Feature(props) {
         <i className="far fa-play-circle featureplaybtn"></i>
         <h1>{props.title}</h1>
         <small>
-          <i className="fas fa-star"></i> 
-          <i className="fas fa-star"></i> 
-          <i className="fas fa-star"></i>
-          <i className="fas fa-star"></i> 
-          <i className="far fa-star"></i>
+          { 
+            Array.apply(null, { length: props.stars }).map((e, i) => (
+              <i className="fas fa-star" key={i}></i>
+            ))
+          }
+          {
+            Array.apply(null, { length: 5-props.stars }).map((e, i) => (
+              <i className="far fa-star" key={i}></i>
+            ))
+          }
           <span>{props.rating} ratings</span>
           <span>•</span>
           <span>{props.genre}</span>  

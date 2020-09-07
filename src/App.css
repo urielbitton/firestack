@@ -52,6 +52,7 @@ button i {
 }
 a {
   text-decoration: none;
+  color: var(--color)
 }
 input, textarea {
   outline: none;
@@ -373,6 +374,9 @@ nav .profile .fa-angle-down {
   font-size: 45px;
   z-index: 10;
 }
+.feature .starsinsert {
+  display: inline-block;
+} 
 .feature small {
   display: block;
   margin: 20px 0;
@@ -1221,6 +1225,9 @@ nav .profile .fa-angle-down {
   box-shadow: 0 1px 10px rgba(0,0,0,0.1);
   background: #f9f9f9;
 }
+.accountinfo .forms label select option:hover {
+  background: var(--color)
+}
 .accountinfo .forms .form-switch {
   width: 50px;
 }
@@ -1244,8 +1251,12 @@ nav .profile .fa-angle-down {
 .accountinfo button:hover {
   box-shadow: 0px 14px 24px -4px rgba(255,18,65,0.48);
 }
- 
-
+.accountinfo a:hover {
+  text-decoration: underline;
+}
+[re-tab="connects"] h6 {
+  margin: 25px auto;
+}
 
 
 
@@ -1324,7 +1335,7 @@ nav .profile .fa-angle-down {
     background: linear-gradient(to right, rgba(0,0,0,0.6) 100%, rgba(255,255,255,0) 100%);
   }
   
-}
+} 
 @media (max-width: 550px) {
   .feature .featdescript {
     width: 90%;
@@ -1334,6 +1345,15 @@ nav .profile .fa-angle-down {
   }
   .notifcont .fa-circle-notch {
     margin-bottom: 10px;
+  }
+  .feature {
+    height: 600px;
+  }
+  .feature p {
+    width: 90%;
+  }
+  .feature small {
+    line-height: 1.7
   }
 }
 @media (max-width: 450px) {

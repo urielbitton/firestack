@@ -59,10 +59,10 @@ function Watchlist(props) {
       )  
       return 
   })
-   
+    
   return (  
     <div className="page watchlistpage">
-      <Feature movie={trendings[9]} title={trendings[9].title} cover={trendings[9].cover} rating={trendings[9].rating} genre={trendings[9].genre} year={trendings[9].year} descript={trendings[9].descript} trailer={trendings[9].trailer} watchlist={trendings[9].watchlist}/>
+      <Feature movie={trendings[9]} title={trendings[9].title} cover={trendings[9].cover} rating={trendings[9].rating} genre={trendings[9].genre} year={trendings[9].year} descript={trendings[9].descript} trailer={trendings[9].trailer} watchlist={trendings[9].watchlist} stars={trendings[9].stars}/>
       <div className="grid">
         <h1>Watchlist</h1>
         <div className="spacer"></div> 

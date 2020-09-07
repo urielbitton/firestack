@@ -20,7 +20,7 @@ function Tvs(props) {
    
   return (  
     <div className="page tvspage">
-      <Feature movie={tvs[1]} title={tvs[1].title} cover={tvs[1].cover} rating={tvs[1].rating} genre={tvs[1].genre} year={tvs[1].year} descript={tvs[1].descript} trailer={tvs[1].trailer} watchlist={tvs[1].watchlist}/>
+      <Feature movie={tvs[1]} title={tvs[1].title} cover={tvs[1].cover} rating={tvs[1].rating} genre={tvs[1].genre} year={tvs[1].year} descript={tvs[1].descript} trailer={tvs[1].trailer} watchlist={tvs[1].watchlist} stars={tvs[1].stars}/>
       <div className="grid">
         <h1>Tv Shows</h1>
         <div className="spacer"></div> 
