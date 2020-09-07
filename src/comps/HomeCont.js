@@ -10,7 +10,7 @@ import Watchlist from './Watchlist'
 import Settings from './Settings'
 import Navbar from './Navbar'
 import MenuSlide from "./MenuSlide";
-import Notifs from './Notifs'
+import MyAccount from './MyAccount'
        
 function HomeCont() {
 
@@ -70,11 +70,14 @@ function HomeCont() {
         <Route path="/Watchlist">
           <Watchlist openmovie={openMovie} trailer={trailer} />
         </Route>  
-        <Route path="/Settings">
+        <Route path="/Settings"> 
           <Settings />
         </Route> 
         <Route path="/MoviePage">
           <MoviePage title={title} year={year} image={image} cover={cover} descript={descript} rating={rating} genre={genre} runtime={runtime} starring={starring} director={director} pictures={pictures} trailer={trailer} imdblink={imdblink} watchlist={watchlist} />
+        </Route> 
+        <Route path="/MyAccount">
+          <MyAccount />
         </Route> 
       </Switch>
   

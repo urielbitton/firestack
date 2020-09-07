@@ -97,6 +97,13 @@ function Navbar(props) {
     document.querySelector('.sidebtn').style.color = '#aaa'
     document.querySelector('.menuslide').style.background = '#181818'
     document.querySelectorAll('h6 hr').forEach(el => el.style.background = "#aaa")
+    document.querySelectorAll('.page h1').forEach(el => el.style.color = "#eee")
+    if(document.body.contains(document.querySelector('.accountpage'))) {
+    document.querySelector('.accountcont').style.background = "#222"
+    document.querySelectorAll('.accountcont input').forEach(el => el.style.cssText += "background:#333;border-color:#444;color:#ccc")
+    document.querySelector('.accountsidebar').style.borderColor = "#333"
+    }
+    
   }
   function undarkMode() {
     document.querySelector('nav').style.background = ''
@@ -107,8 +114,15 @@ function Navbar(props) {
     document.querySelector('.sidebtn').style.color = ''
     document.querySelector('.menuslide').style.background = ''
     document.querySelectorAll('h6 hr').forEach(el => el.style.background = "")
+    document.querySelectorAll('.page h1').forEach(el => el.style.color = "")
+    if(document.body.contains(document.querySelector('.accountpage'))) {
+    document.querySelector('.accountcont').style.background = ""
+    document.querySelectorAll('.accountcont input').forEach(el => el.style.cssText += "background:#f7f7f7;border-color:#eee;color:#000")
+    document.querySelector('.accountsidebar').style.borderColor = ""
+    }
+    
   }
-
+  
   return (
     <>
     <nav>
@@ -124,14 +138,15 @@ function Navbar(props) {
       </div>
       <div className="profile">
         <img src="https://i.imgur.com/t9EHxct.png" alt="prof" />
+        <i className="fas fa-angle-down"></i>
         <div className="profmenu">
-          <h6>My Account</h6>
-          <h6>Preferences</h6>
-          <h6>About Firestack</h6>
-          <h6>Settings</h6>
+          <Link to="/MyAccount"><h6><i class="far fa-user"></i>Account</h6></Link>
+          <Link to="/MyAccount"><h6><i class="fas fa-sliders-h"></i>Preferences</h6></Link>
+          <Link to="/MyAccount"><h6><i class="far fa-question-circle"></i>About Firestack</h6></Link>
+          <Link to="/Watchlist"><h6><i class="fas fa-cog"></i>Settings</h6></Link>
         </div>
-      </div>
-      
+      </div>  
+       
       <label>
       <input placeholder="Search" className="navsearch"/> 
       </label>

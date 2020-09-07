@@ -60,10 +60,10 @@ function MenuSlide() {
         <h4>Watchlist</h4>
       </div>
       </Link>
-      <Link to="/Settings">
+      <Link to="/MyAccount">
       <div className="menubox">
-        <i className="fas fa-cog"></i>
-        <h4>Settings</h4> 
+      <i class="far fa-user"></i>
+        <h4>Account</h4> 
       </div>
       </Link>
     </div>
