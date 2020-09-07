@@ -78,10 +78,10 @@ function HomeCont() {
         </Route> 
         <Route path="/MyAccount">
           <MyAccount />
-        </Route> 
-      </Switch>
-  
-
+        </Route>
+      </Switch> 
+      
+ 
     </div> 
   )  
 }  

@@ -6,6 +6,7 @@ function MyAccount() {
   useEffect(() => {
     const taber = document.querySelectorAll('[re-taber]')
     const tab = document.querySelectorAll('[re-tab]')
+    const activetab = document.querySelector('.activetab')
 
     taber.forEach(el1 => {
       el1.onclick = () => {
@@ -16,7 +17,9 @@ function MyAccount() {
             el2.style.opacity = '0'
           }, 50); 
         }) 
+        taber.forEach(el3 => el3.classList.remove('activetab'))
         document.querySelector(`[re-tab="${tabselector}"]`).style.display = 'block'
+        el1.classList.add('activetab')
         setTimeout(() => {
           document.querySelector(`[re-tab="${tabselector}"]`).style.opacity = '1'
         }, 50);
@@ -26,6 +29,26 @@ function MyAccount() {
      
   },[])  
 
+  const notifcont = document.createElement('DIV')
+  notifcont.classList.add('notifcont')
+
+  function dropNotif() {
+    notifcont.remove()
+        notifcont.innerHTML = `<i class="fas fa-sliders-h"></i><p>Your account settings have been saved successfully.</p><i className='close'></i>`
+        document.body.appendChild(notifcont)
+        notifcont.style.display = "block"  
+        setTimeout(() => {
+            notifcont.style.cssText += "opacity:1;transform:scale(1);bottom:20px"         
+        }, 100)
+        setTimeout(() => {
+            notifcont.style.cssText += "opacity:0;transform:scale(0.9);bottom:5px" 
+            setTimeout(() => {
+                notifcont.style.display = "block" 
+                notifcont.remove()           
+            }, 100) 
+        }, 5000); 
+  }
+ 
   return (
     <div className="accountpage">
       <div className="spacer"></div>
@@ -37,7 +60,7 @@ function MyAccount() {
               <h6 re-taber="account" className="activetab"><i class="far fa-user"></i>Account</h6>
               <h6 re-taber="preferences"><i class="fas fa-sliders-h"></i>Preferences</h6>
               <h6 re-taber="about"><i class="far fa-question-circle"></i>About Firestack</h6>
-              <h6 re-taber="settings"><i class="fas fa-cog"></i>Settings</h6>
+              <h6 re-taber="connects"><i class="fas fa-plug"></i>Connects</h6>
             </div>
             <small>Firestack app<span>&copy; <a href="https://flexrweb.com" target="_blank" rel="noopener noreferrer">Helix Designs</a></span></small>
           </div> 
@@ -59,19 +82,72 @@ function MyAccount() {
                 <label><small>Country</small><input type="text"/></label>
                 <label><small>Age</small><input type="number" min="1" max="120"/></label>
               </div> 
-              <button>Save</button> 
+              <button onClick={dropNotif}>Save</button> 
             </div> 
             <div re-tab="preferences">
               <h4>Preferences</h4>
+              <div className="clear"></div>
+              <h6>Theme</h6>
+              <div className="forms">
+                <label><small>Theme Style</small>
+                  <select>
+                    <option selected>Firestack Red (Default)</option>
+                    <option>Blue Surge</option>
+                    <option>Green Haze</option>
+                    <option>Purple Dip</option> 
+                  </select>
+                </label>
+                <label><small>App Color</small>
+                  <select>
+                    <option selected>Fire Red (Default)</option>
+                    <option>Lilac Purple</option>
+                    <option>Leaf Green</option> 
+                    <option>Electric Blue</option> 
+                  </select>
+                </label>
+              </div>
+              <h6>System</h6>
+                <div className="clear"></div>
+                <div className="forms">
+                  <label class="form-switch">
+                    <small>Enable Notifications</small>
+                      <input type="checkbox"/><i></i>
+                  </label>
+                  <label class="form-switch">
+                    <small>Enable Darkmode</small>
+                      <input type="checkbox"/><i></i>
+                  </label>
+                </div>
+              <h6>Email</h6>
+              <div className="forms">
+                  <label class="form-switch">
+                    <small>Notify New Releases</small>
+                      <input type="checkbox"/><i></i>
+                  </label>
+                </div>
             </div>
             <div re-tab="about">
               <h4>About Firestack</h4>
+              <h6>A Movie entertainment App - Made with React JS</h6>
+              <img className="aboutlogo" src="https://img.icons8.com/cute-clipart/64/000000/video-message.png" alt="logo"/>
+              <p>Firestack is a passionate project developed and designed by Software Developer Uriel Bitton. Firestack allows users
+                to browse the latest and trending movies, add titles to your watchlist to watch them later, save titles to your favorites and create new titles
+                easily in a modern design interface. <br/><br/>
+                The latest version of Firestack only supports single user features, however the next version is in development and will feature some exciting new social/multi user features.
+                <br/><br/>So stay tuned by email and enjoy Firestack until then!
+                <br/><br/>
+                <small style={{fontWeight:'600'}}>Developer/Creator: Uriel Bitton (Helix Designs)</small>
+              </p>
             </div>
-            <div re-tab="settings">
-              <h4>Settings</h4>
+            <div re-tab="connects">
+              <h4>Connects</h4> 
+              <h6><i class="fab fa-facebook"></i>Facebook</h6>
+              <h6><i class="fas fa-play-circle"></i>Netflix</h6>
+
+              <h6>More Connects Features coming soon...</h6>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </div>
   )

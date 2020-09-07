@@ -67,25 +67,45 @@ function Navbar(props) {
           document.body.style.overflowY = "hidden"
         }, 500);
     }
-
+     
     const profile = document.querySelector('.profile')
     const profmenu = document.querySelector('.profmenu')
-    profile.addEventListener('click', openProfile)
-    function openProfile(e) {
-      e.stopImmediatePropagation()
-      profmenu.style.display = 'block'
-      setTimeout(() => {
-        profmenu.style.opacity = '1'
-      }, 50);
+    let profclick = false
+    profile.addEventListener('click', profileMenu)
+    
+    function profileMenu() {
+      if(profclick === false) {
+        profmenu.style.display = 'block'
+        setTimeout(() => {
+          profmenu.style.opacity = '1'
+        }, 50);
+        profclick = true
+      } 
+      else {
+        profmenu.style.opacity = '0'
+        setTimeout(() => {
+          profmenu.style.display = 'none'
+        }, 50);
+        profclick = false
+      }  
     }  
-    function closeProfile() {
-      profmenu.style.opacity = '0'
-      setTimeout(() => {
-        profmenu.style.display = 'none'
-      }, 50);
+    if(document.body.contains(document.querySelector('.home'))) {
+      document.querySelector('.home').onclick = () => closeProfMenu()
     }
-    document.body.onclick = () => closeProfile()
-
+    if(document.body.contains(document.querySelector('.page'))) {
+      document.querySelector('.page').onclick = () => closeProfMenu()
+    }
+    if(document.body.contains(document.querySelector('.moviepage'))) {
+      document.querySelector('.moviepage').onclick = () => closeProfMenu()
+    }
+    function closeProfMenu() {
+      profmenu.style.opacity = '0'
+        setTimeout(() => {
+          profmenu.style.display = 'none'
+        }, 50); 
+        profclick = false
+    }
+    
   },[]) 
    
   function darkMode() {
@@ -125,7 +145,7 @@ function Navbar(props) {
   
   return (
     <>
-    <nav>
+    <nav> 
       <div className="grid">
       <i className="fas fa-bars sidebtn"></i>
 
@@ -136,16 +156,16 @@ function Navbar(props) {
         <Link to="/Favorites" className="favoriteslink"><h6><i className="fas fa-heart"></i>Favorites<hr/></h6></Link>
         <Link to="/Watchlist" className="watchlistlink"><h6><i className="fas fa-list"></i>Watchlist<hr/></h6></Link>
       </div>
-      <div className="profile">
+      <div className="profile"> 
         <img src="https://i.imgur.com/t9EHxct.png" alt="prof" />
         <i className="fas fa-angle-down"></i>
         <div className="profmenu">
           <Link to="/MyAccount"><h6><i class="far fa-user"></i>Account</h6></Link>
           <Link to="/MyAccount"><h6><i class="fas fa-sliders-h"></i>Preferences</h6></Link>
           <Link to="/MyAccount"><h6><i class="far fa-question-circle"></i>About Firestack</h6></Link>
-          <Link to="/Watchlist"><h6><i class="fas fa-cog"></i>Settings</h6></Link>
+          <Link to="/MyAccount"><h6><i class="fas fa-plug"></i>Connects</h6></Link>
         </div>
-      </div>  
+      </div>   
        
       <label>
       <input placeholder="Search" className="navsearch"/> 

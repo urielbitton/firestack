@@ -121,6 +121,8 @@ nav {
   text-align: center;
   background: #fff;
   z-index: 900;
+  user-select: none;
+  -webkit-user-select: none;
 }
 nav .sidebtn {
   font-size: 20px;
@@ -798,7 +800,7 @@ nav .profile .fa-angle-down {
   color: #ddd;
   display: inline-block;
 } 
-.notifcont .fa-circle-notch {
+.notifcont .fas {
   margin-right: 20px;
 }
 .notifcont .close {
@@ -1098,8 +1100,9 @@ nav .profile .fa-angle-down {
   font-weight: 600;
   transition: all 0.2s;
   cursor: pointer;
-  margin: 25px 0;
+  margin: 12px 0;
   padding: 5px 0;
+  display: inline-block;
 }
 .accountnav  .activetab {
   color: var(--color)
@@ -1146,7 +1149,26 @@ nav .profile .fa-angle-down {
   font-size: 20px;
   color: #555;
   font-weight: 600;
-  margin-bottom: 40px;
+  margin-bottom: 40px; 
+} 
+.accountinfo h6 {
+  font-size: 15px;
+  color: #555;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.accountinfo h6 i {
+  margin-right: 10px;
+}
+.accountinfo p {
+  font-size: 13px;
+  width: 50%;
+  line-height: 1.8;
+}
+.aboutlogo {
+  width: 50px;
+  margin: 10px 0;
 }
 .accountinfo .imgcont {
   position: relative;
@@ -1185,7 +1207,7 @@ nav .profile .fa-angle-down {
   grid-template-columns: 250px 250px;
   grid-gap: 40px 50px;
 } 
-.accountinfo .forms label input {
+.accountinfo .forms label input, .accountinfo .forms label select {
   padding: 12px 10px;
   border: 1px solid #eee;
   background: #f7f7f7;
@@ -1193,10 +1215,14 @@ nav .profile .fa-angle-down {
   text-align: center;
   transition: all 0.2s;
   width: 100%;
+  outline: none;
 }
-.accountinfo .forms label input:focus {
+.accountinfo .forms label input:focus, .accountinfo .forms label select:focus {
   box-shadow: 0 1px 10px rgba(0,0,0,0.1);
   background: #f9f9f9;
+}
+.accountinfo .forms .form-switch {
+  width: 50px;
 }
 .accountinfo .forms label small {
   font-size: 10px;
@@ -1204,6 +1230,7 @@ nav .profile .fa-angle-down {
   color: #777;
   display: block;
   margin-bottom: 5px;
+  white-space: nowrap;
 }
 .accountinfo button {
   margin-top: 50px;
@@ -1217,6 +1244,7 @@ nav .profile .fa-angle-down {
 .accountinfo button:hover {
   box-shadow: 0px 14px 24px -4px rgba(255,18,65,0.48);
 }
+ 
 
 
 
@@ -1230,6 +1258,16 @@ nav .profile .fa-angle-down {
 
 
 
+
+
+
+
+
+
+/* iOS Style Button */
+.form-switch{display:inline-block;cursor:pointer;-webkit-tap-highlight-color:transparent}.form-switch i{position:relative;display:inline-block;margin-right:.5rem;width:46px;height:26px;background-color:#e6e6e6;border-radius:23px;vertical-align:text-bottom;transition:all .3s linear}.form-switch i::before{content:"";position:absolute;left:0;width:42px;height:22px;background-color:#fff;border-radius:11px;transform:translate3d(2px,2px,0) scale3d(1,1,1);transition:all .25s linear}.form-switch i::after{content:"";position:absolute;left:0;width:22px;height:22px;background-color:#fff;border-radius:11px;box-shadow:0 2px 2px rgba(0,0,0,.24);transform:translate3d(2px,2px,0);transition:all .2s ease-in-out}
+.form-switch:active i::after{width:28px;transform:translate3d(2px,2px,0)}.form-switch:active input:checked+i::after{transform:translate3d(16px,2px,0)}.form-switch input{display:none}.form-switch input:checked+i{background:var(--color)}.form-switch input:checked+i::before{transform:translate3d(18px,2px,0) scale3d(0,0,0)}.form-switch input:checked+i::after{transform:translate3d(22px,2px,0)}
+ 
 
 @media (max-width:1600px) {
   .grid {
@@ -1282,10 +1320,20 @@ nav .profile .fa-angle-down {
     margin: 30px auto;
     margin-left: 0;
   }
+  .feature::after {
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 100%, rgba(255,255,255,0) 100%);
+  }
+  
 }
 @media (max-width: 550px) {
   .feature .featdescript {
     width: 90%;
+  }
+  .notifcont {
+    width: 90%;
+  }
+  .notifcont .fa-circle-notch {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 450px) {
