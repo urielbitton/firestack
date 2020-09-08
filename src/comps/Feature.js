@@ -88,7 +88,7 @@ function Feature(props) {
       setTimeout(() => {document.querySelector('.watchlistlink').click()}, 1);
     }
   }   
-
+ 
 
   return ( 
     <>  

@@ -50,15 +50,31 @@ function Movies(props) {
   })  
 
   const allmovies = [...rowtrendings, ...rowclassics, ...rowpopulars, ...rowsuperheros, ...rowgeneral]
-  let themovies = allmovies
+  
+  const [movieresult, setMovieresult] = useState(allmovies)
  
-  function filterYear() {
-    themovies = allmovies.map(el => {
+  //all filter functions
+  function sortYear() {
+    const yearsort = allmovies.map(el => {
       if(el.props.children.props.year > 2019)
         return el
-    })
+    }) 
+    setMovieresult(yearsort) 
   }
-  
+   function sortTitle() {
+     const titlesort = allmovies.map(el => {
+       if(el.props.children.props.title.includes("The")) 
+        return el
+     }) 
+     setMovieresult(titlesort)
+   }
+  //reset sorts
+  function resetSort() {
+    setMovieresult(allmovies)
+  }
+
+
+  //shuffle allmovies
   function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     while (0 !== currentIndex) {
@@ -77,25 +93,27 @@ function Movies(props) {
     const box = document.querySelectorAll('.pagegrid .box')
 
     function searchMovies() { 
-      let filter, title, txtValue
-      filter = moviessearch.value.toUpperCase()
+      let filtertitle = moviessearch.value.toUpperCase()
+      let filteryear = moviessearch.value
       
       for (let i = 0; i < box.length; i++) {
-        title = box[i].getElementsByTagName("h4")[0]
-        txtValue = title.textContent || title.innerText
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        let title = box[i].getElementsByTagName("h4")[0]
+        let year = box[i].getElementsByTagName("h5")[0].innerHTML
+        let titlevalue = title.innerText 
+        let yearvalue = parseInt(year,10)
+        if (titlevalue.toUpperCase().indexOf(filtertitle) > -1 || yearvalue === filteryear) {
           box[i].style.display = "block"
           setTimeout(() => {
             box[i].style.opacity = "1"
             box[i].style.transform = "scale(1)"
-          }, 150);
+          }, 150)
         }  
         else { 
           box[i].style.opacity = "0"
           box[i].style.transform = "scale(0.9)"
           setTimeout(() => {
             box[i].style.display = "none" 
-          }, 150);
+          }, 150)
         }
       }     
         
@@ -111,17 +129,19 @@ function Movies(props) {
         <div className="filterdiv">
           <h5><i class="fas fa-sliders-h"></i>Filters</h5>
           <small>Sort By:</small>
-          <h6>Title<i class="fas fa-angle-down"></i></h6>
-          <h6 onClick={filterYear}>Year<i class="fas fa-angle-down"></i></h6> 
+          <h6 onClick={sortTitle}>Title<i class="fas fa-angle-down"></i></h6>
+          <h6 onClick={sortYear}>Year<i class="fas fa-angle-down"></i></h6> 
           <h6>Duration<i class="fas fa-angle-down"></i></h6>
           <h6>Rating<i class="fas fa-angle-down"></i></h6> 
-          <h6>Genre<i class="fas fa-angle-down"></i></h6>  
+          <h6>Genre<i class="fas fa-angle-down"></i></h6> 
+          <span style={{opacity:'0.2'}}>|</span> 
+          <h6 onClick={resetSort}>Reset</h6>  
           <small>Search :</small>
           <input type="text" placeholder="Search Movies..." className="moviessearch"/>
         </div>
         <div className="spacers"></div> 
         <div className="pagegrid">
-          {shuffle(themovies)}
+          {movieresult} 
         </div>  
         <div className="spacer"></div>
       </div> 
